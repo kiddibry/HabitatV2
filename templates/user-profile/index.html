@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h3 class="red">Hello from the index function within the Profile app</h3>
+{% for person in users %}
+    {{ person.username }}<br>
+    {{ person.email }}<br>
+    {{ person.first_name }}<br>
+    {{ person.last_name }}<br>
+
+    {% endfor %}
+
+{% endblock %}
