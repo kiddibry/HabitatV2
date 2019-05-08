@@ -1,0 +1,7 @@
+<div>
+    <a href="/users/{{ user.id }}">
+        <h4>{{ user.name }}</h4>
+        <img src="{{ user.userimage_set.first.image }}" alt="image">
+        <p>Started: {{ user.created }}</p>
+    </a>
+</div>

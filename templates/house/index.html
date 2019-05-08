@@ -4,10 +4,7 @@
 
 <h3>Houses</h3>
 {% for house in houses %}
-    <h4>{{ house.name }}</h4>
-    <img src="{{ house.houseimage_set.first.image }}">
-    <p>size:{{ house.size }} price:{{ house.price }}</p>
-    <p>description:{{ house.description }}</p>
+    {% include 'house/single_house.html' with house=house %}
 {% endfor %}
 
 {% endblock %}

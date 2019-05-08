@@ -2,6 +2,9 @@
 
 {% block content %}
 
-<h3>This is the users page</h3>
+<h3>Users</h3>
+{% for user in users %}
+    {% include 'user/single_user.html' with user=user %}
+{% endfor %}
 
 {% endblock %}
