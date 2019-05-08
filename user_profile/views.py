@@ -7,7 +7,7 @@ users = [
         'first_name': 'Jonathan',
         'last_name': 'Johns',
         'email': 'johhny@johns.com',
-        'username': 'Jobs',
+        'username': 'Johhny89Johns',
     }
 ]
 

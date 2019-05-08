@@ -1,0 +1,11 @@
+header {
+    background: #3d86ff;
+    border-style:solid;
+    margin-left: 2%;
+    width: 96%;
+    height: 5%;
+}
+
+#doge {
+    float:left;
+}
