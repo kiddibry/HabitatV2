@@ -1,7 +1,22 @@
 {% extends 'base.html' %}
 
-{% block content %}
+{% load static %}
 
-<h3>This is the Home page</h3>
+{% block content %}
+<link href="{% static 'css/home.css' %}" rel="stylesheet">
+
+<div class="entry_text">
+    <font size="10">Find your new ___</font>
+</div>
+
+<div class="wrap">
+        <div class="search">
+           <input type="text" class="searchTerm">
+           <button type="submit" class="searchButton">
+                <img src="{% static 'images/magnify.png' %}" alt="ENHANCE" height="25px" width="25px">
+             <i class="fa fa-search"></i>
+          </button>
+        </div>
+     </div>
 
 {% endblock %}
