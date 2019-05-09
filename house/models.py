@@ -1,9 +1,11 @@
 from django.db import models
-from user.models import User
+from user.models import Profile 
 
 
 class HouseCategory(models.Model):
     name = models.CharField(max_length=255)
+    def __str__(self):
+        return self.name
 
 
 class House(models.Model):
@@ -13,7 +15,7 @@ class House(models.Model):
     size = models.CharField(max_length=255)
     category = models.ForeignKey(HouseCategory, on_delete=models.CASCADE)
     on_sale = models.BooleanField()
-    seller = models.ForeignKey(User, on_delete=models.CASCADE)
+    seller = models.ForeignKey(Profile, on_delete=models.CASCADE)
 
 
 class HouseImage(models.Model):

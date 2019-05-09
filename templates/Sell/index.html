@@ -1,7 +1,59 @@
 {% extends 'base.html' %}
 
+{% load static %}
+
 {% block content %}
 
-<h3>This is the sell page</h3>
+    <link rel="stylesheet" href="{% static 'css/merch.css' %}">
+
+    <form action="submitEval.php" target="_blank" method="post">
+  <fieldset>
+    <legend>Personal information:</legend>
+    <label for="first">First name:</label>
+    <input type="text" id="first" name="firstname" value="">
+    <br>
+    <label for="last">Last name:</label>
+    <input type="text" id="last" name="lastname" value="">
+    <br>
+
+    <label for="ssn">Social Security Number:</label>
+    <input type="text" id="ssn" name="ssn" value="">
+    <br>
+    Gender:<br>
+    <input type="radio" name="gender" value="male"> Male<br>
+    <input type="radio" name="gender" value="female"> Female<br>
+    <input type="radio" name="gender" value="other" checked> Other
+  </fieldset>
+
+  <fieldset>
+        <legend>Course context:</legend>
+        <label for="uni">University:</label>
+        <input type="text" id="uni" name="uni" value="RU" disabled>
+        <br>
+        <label for="school">School:</label>
+            <select id="school" name="school" disabled>
+            <option value="scs" selected>Computer Science</option>
+            <option value="sb">Business</option>
+            <option value="sl">Law</option>
+            <option value="sse">Engineering</option>
+          </select>
+          <br>
+          <label for="course">Course:</label>
+        <input type="text" id="course" name="course" value="T-213-VEFF" disabled>
+    </fieldset>
+
+    <fieldset>
+            <legend>Which lectures did you attend?</legend>
+            <input type="checkbox" name="lectures" value="L1: Intro">L1: Introduction<br>
+            <input type="checkbox" name="lectures" value="L2: Networks">L2: Networks<br>
+            <input type="checkbox" name="lectures" value="L3: HTMLI">L3: HTML I<br>
+    </fieldset>
+    <fieldset>
+            <legend>Please describe your overall impression of the course</legend>
+            <textarea name="impression" rows="10" cols="50">My impression of this course is...</textarea>
+    </fieldset>
+
+  <input type="submit" value="Submit Evaluation">
+</form>
 
 {% endblock %}

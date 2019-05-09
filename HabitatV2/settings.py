@@ -25,7 +25,7 @@ SECRET_KEY = '+(&b^q-neduew^to=fkx@_*(2m0e4*pxea+c7c2-q(vgk-)j2p'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1']
 
 
 # Application definition
@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'house.apps.HouseConfig',
-    'user.apps.UserConfig'
+    'user.apps.UserConfig',
+    'merch.apps.MerchConfig'
 ]
 
 MIDDLEWARE = [
@@ -79,9 +80,9 @@ WSGI_APPLICATION = 'HabitatV2.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'ytbvrhcr',
-        'USER': 'ytbvrhcr',
-        'PASSWORD': 'gTqIcTy4pQCvwwmZY3L-85Ha7_Pm_-l3',
+        'NAME': 'hytkmznn',
+        'USER': 'hytkmznn',
+        'PASSWORD': 'kUQUuLnXscWUQlH2odjmEP2s8A8LECnO',
         'HOST': 'balarama.db.elephantsql.com',
         'PORT': '5432',
     }
@@ -128,3 +129,7 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static")
 ]
+
+LOGIN_REDIRECT_URL = '/users/profile'
+LOGIN_URL = '/users/login'
+

@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="ytbvrhcr@balarama.db.elephantsql.com" uuid="34eeba36-ac55-465b-ac32-92483617b9b1">
+    <data-source source="LOCAL" name="ytbvrhcr@balarama.db.elephantsql.com" uuid="d8919051-1fe7-4c74-8e68-6af6adfe3702">
       <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
       <jdbc-url>jdbc:postgresql://balarama.db.elephantsql.com:5432/ytbvrhcr</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="Habitat_DataBase" uuid="6eb41647-6780-4885-b74f-0f00e67a1a65">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://balarama.db.elephantsql.com:5432/hytkmznn</jdbc-url>
     </data-source>
   </component>
 </project>

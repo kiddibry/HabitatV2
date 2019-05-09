@@ -1,12 +1,25 @@
 {% extends 'base.html' %}
 
+{% load static %}
+
 {% block content %}
+    <link rel="stylesheet" type="text/css" href="{%static 'css/house_detail.css'%}">
 
 <h2>{{ house.name }}</h2>
+<section>
+    <div class="images">
 {% for house_image in house.houseimage_set.all %}
-    <img src="{{ house_image.image }}" alt="image">
+        <img src="{{ house_image.image }}" alt="Home">
 {% endfor %}
-<p>Price: {{ house.price }}  |  Size: {{ house.size }}</p>
+    </div>
+</section>
+
+<div class="description">
+<h4>{{ house.description }}</h4>
+<p>Price: {{ house.price }}  |  Size: {{ house.size }}m²</p>
 <p>Seller:<a href="/users/{{ house.seller_id }}">{{ house.seller.name }}</a></p>
+<a href="{% url 'delete_house' house.id%}" class="block btn btn-primary">Delete house</a>
+<a href="{% url 'update_house' house.id%}" class="block btn btn-primary">Update house</a>
+</div>
 
 {% endblock %}
