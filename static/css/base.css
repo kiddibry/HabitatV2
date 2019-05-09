@@ -1,8 +1,8 @@
-    footer
+footer
     {
-        position: relative;
-        bottom: 0;
-        width: 100%;
+            position: relative;
+            bottom: 0;
+            width: 100%;
     }
 
     .site-footer
@@ -185,7 +185,7 @@
     {
       background-color:#ea4c89
     }
-
+    
     @media (max-width:767px)
     {
       .social-icons li.title
