@@ -6,7 +6,10 @@
 {% for house_image in house.houseimage_set.all %}
     <img src="{{ house_image.image }}" alt="image">
 {% endfor %}
+<h4>{{ house.description }}</h4>
 <p>Price: {{ house.price }}  |  Size: {{ house.size }}</p>
 <p>Seller:<a href="/users/{{ house.seller_id }}">{{ house.seller.name }}</a></p>
+<a href="{% url 'delete_house' house.id%}" class="block btn btn-primary">Delete house</a>
+<a href="{% url 'update_house' house.id%}" class="block btn btn-primary">Update house</a>
 
 {% endblock %}

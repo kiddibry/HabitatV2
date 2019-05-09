@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% block content %}
+    <form class="form form-horizontal" action="{% url 'create_house' %}" method="post">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" value="Put up for sale">
+    </form>
+{% endblock %}
