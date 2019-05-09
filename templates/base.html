@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
     <style>
-      footer
+    footer
     {
             position: relative;
             bottom: 0;
@@ -256,16 +256,7 @@
         <img class="navbar-header-logo" src="{% static 'images/doge.png' %}" alt="logo" width="225px" height="235px">
       <a class="navbar-brand" style="font-size: 3em" href="{% url 'home-index' %}">Habitat</a>
         <a><p class="username">Username</p></a>
-<<<<<<< HEAD
-        
-=======
-        {% if user.is_authenticated %}
-            <a href="{% url 'logout' %}">Logout</a>
-        {% else %}
-            <a href="{% url 'login' %}">Login</a>
-            <a href="{% url 'register' %}">Sign up</a>
-        {% endif %}
->>>>>>> 04b635068b5364dcd3823ad28e69d7d5780076ce
+
     </div>
   </div><!-- /.container-fluid -->
 </nav>
@@ -277,10 +268,9 @@
     {% endblock %}
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <script src="{% static 'js/houses.js' %}"></script>
+
 <!-- Here we are going to putt a footer -->
 
     <footer>
