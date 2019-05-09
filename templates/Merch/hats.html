@@ -1,1 +1,25 @@
-<h3>hats!!!</h3>
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+    <link rel="stylesheet" href="{% static 'css/merch.css' %}">
+
+  <main id="bodyContent">
+
+      <div class="foodBox imageBox p5">
+    <img src="{% static 'images/hat.png' %}" alt="Trulllli" width="400" height="222">
+      <h3>Hats</h3>
+      <p>A crazy hat</p>
+      <p>8.80&euro;</p>
+    </div>
+
+   <div class="foodBox imageBox p5">
+    <img src="{% static 'images/hatt.png' %}" alt="Trulllli" width="400" height="222">
+      <h3>Hats</h3>
+      <p>A crazy hat</p>
+      <p>8.80&euro;</p>
+    </div>
+
+  </main>
+{% endblock %}
