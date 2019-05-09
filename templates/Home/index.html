@@ -3,20 +3,44 @@
 {% load static %}
 
 {% block content %}
-<link href="{% static 'css/home.css' %}" rel="stylesheet">
+<link rel="stylesheet" href="{% static 'css/Home.css' %}">
 
-<div class="entry_text">
-    <font size="10">Find your new ___</font>
-</div>
+    <h2 style="text-align: center">Find your new <button><p>____</p></button></h2>
 
-<div class="wrap">
+    <div class="searchBar">
         <div class="search">
-           <input type="text" class="searchTerm">
-           <button type="submit" class="searchButton">
-                <img src="{% static 'images/magnify.png' %}" alt="ENHANCE" height="25px" width="25px">
-             <i class="fa fa-search"></i>
-          </button>
+            <input type="text" class="searchTerm" placeholder=" Search for your new home  ">
+            <button type="submit" class="searchButton">
+                <i class="fa fa-search"><p>Search</p></i>
+            </button>
         </div>
-     </div>
+    </div>
+
+    <div class="chooseBox">
+        <div class="allBox">
+            <div class="findBox"><h3>Find your next home</h3></div>
+            <div class="sellBox"><h3>Sell your home</h3></div>
+            <div class="merchBox"><h3>Buy merch</h3></div>
+        </div>
+    </div>
+
+
+    <div class="homes">
+        <div class="info"> Info</div>
+        <div class="photo"> Photo</div>
+        <div class="prize"> 100.000.000kr</div>
+    </div>
+
+    <div class="homes">
+        <h3>Hér fer mynd af 4 vinsælum húsum</h3>
+    </div>
+
+    <div class="homes">
+        <h3>Hér fer mynd af 4 vinsælum húsum</h3>
+    </div>
+
+    <div class="homes">
+        <h3>Hér fer mynd af 4 vinsælum húsum</h3>
+    </div>
 
 {% endblock %}
