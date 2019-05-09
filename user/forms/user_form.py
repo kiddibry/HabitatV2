@@ -16,7 +16,7 @@ class UserUpdateForm(ModelForm):
 
 
 class UserCreateForm(ModelForm):
-
+    name = 
     class Meta:
         model = User
         exclude = ['id']
