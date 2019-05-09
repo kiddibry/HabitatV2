@@ -80,9 +80,9 @@ WSGI_APPLICATION = 'HabitatV2.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'ytbvrhcr',
-        'USER': 'ytbvrhcr',
-        'PASSWORD': 'gTqIcTy4pQCvwwmZY3L-85Ha7_Pm_-l3',
+        'NAME': 'hytkmznn',
+        'USER': 'hytkmznn',
+        'PASSWORD': 'kUQUuLnXscWUQlH2odjmEP2s8A8LECnO',
         'HOST': 'balarama.db.elephantsql.com',
         'PORT': '5432',
     }
