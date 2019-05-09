@@ -1,8 +1,7 @@
 <div>
     <a href="/houses/{{ house.id }}">
         <h4>{{ house.name }}</h4>
-
-        <img src="{{ house.houseimage_set.first.image }}" alt="image" width="500px", width="500px">
+        <img src="{{ house.houseimage_set.first.image }}" alt="image">
         <p>size:{{ house.size }} price:{{ house.price }}</p>
         <p>description:{{ house.description }}</p>
     </a>
