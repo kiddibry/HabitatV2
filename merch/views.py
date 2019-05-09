@@ -14,3 +14,6 @@ def hats(request):
 def tshirts(request):
     return render(request, 'merch/t-shirts.html')
 
+def aboutmerch(request):
+    return render(request, 'merch/aboutmerch.html')
+
