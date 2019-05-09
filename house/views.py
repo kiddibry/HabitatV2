@@ -1,3 +1,4 @@
+from django.contrib.auth.decorators import login_required
 from django.http import JsonResponse
 from django.shortcuts import render, get_object_or_404, redirect
 from house.forms.house_form import HouseCreateForm, HouseUpdateForm
@@ -24,6 +25,7 @@ def get_house_by_id(request, id):
     })
 
 
+@login_required
 def create_house(request):
     if request.method == 'POST':
         form = HouseCreateForm(data=request.POST)
@@ -39,12 +41,14 @@ def create_house(request):
     })
 
 
+@login_required
 def delete_house(request, id):
     house = get_object_or_404(House, pk=id)
     house.delete()
     return redirect('house-index')
 
 
+@login_required
 def update_house(request, id):
     instance = get_object_or_404(House, pk=id)
     if request.method == 'POST':
