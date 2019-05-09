@@ -1,0 +1,22 @@
+section {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.images { 
+    min-width: 0;
+    margin: 10px;
+}
+
+img {
+    width: 45%;
+    height: 45%;
+    max-width: 100%; 
+    max-height: 450px; 
+}
+ 
+.description {
+    padding-bottom: 5%;
+    text-align: center;
+}
