@@ -3,8 +3,17 @@
 {% block content %}
 
 <h3>Houses</h3>
-{% for house in houses %}
-    {% include 'house/single_house.html' with house=house %}
-{% endfor %}
+<div class="input-group">
+    <input type="search" class="form-control" id="search-box" placeholder="Enter your search here.. " />
+    <div class="input-group-btn">
+        <button type="button" id="search-btn" class="btn btn-default">Search</button>
+    </div>
+</div>
+<div class="houses">
+    {% for house in houses %}
+        {% include 'house/single_house.html' with house=house %}
+    {% endfor %}
+</div>
+
 
 {% endblock %}
