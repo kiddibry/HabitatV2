@@ -1,3 +1,4 @@
+{% load static %}
 <!doctype html>
 <html lang="en">
 <head>
@@ -5,38 +6,40 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Habitat</title>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-    {% load static %}
 
     <style>
-
-        footer
-        {
+      footer
+    {
             position: relative;
             bottom: 0;
             width: 100%;
-        }
-        .site-footer
-        {
+    }
+
+    .site-footer
+    {
       background-color:#26272b;
       padding:20px 0 3px;
       font-size:15px;
       line-height:24px;
       color:#737373;
     }
+
     .site-footer hr
     {
       border-top-color:#bbb;
       opacity:0.5
     }
+
     .site-footer hr.small
     {
       margin:20px 0
     }
+
     .site-footer h6
     {
       color:#fff;
@@ -45,41 +48,50 @@
       margin-top:5px;
       letter-spacing:2px
     }
+
     .site-footer a
     {
       color:#737373;
     }
+
     .site-footer a:hover
     {
       color:#3366cc;
       text-decoration:none;
     }
+
     .footer-links
     {
       padding-left:0;
       list-style:none
     }
+
     .footer-links li
     {
       display:block
     }
+
     .footer-links a
     {
       color:#737373
     }
+
     .footer-links a:active,.footer-links a:focus,.footer-links a:hover
     {
       color:#3366cc;
       text-decoration:none;
     }
+
     .footer-links.inline li
     {
       display:inline-block
     }
+
     .site-footer .social-icons
     {
       text-align:right
     }
+
     .site-footer .social-icons a
     {
       width:40px;
@@ -90,10 +102,12 @@
       border-radius:100%;
       background-color:#33353d
     }
+
     .copyright-text
     {
       margin:0
     }
+
     @media (max-width:991px)
     {
       .site-footer [class^=col-]
@@ -101,28 +115,33 @@
         margin-bottom:30px
       }
     }
+
     @media (max-width:767px)
     {
       .site-footer
       {
         padding-bottom:0
       }
+
       .site-footer .copyright-text,.site-footer .social-icons
       {
         text-align:center
       }
     }
+
     .social-icons
     {
       padding-left:0;
       margin-bottom:0;
       list-style:none
     }
+
     .social-icons li
     {
       display:inline-block;
       margin-bottom:4px
     }
+
     .social-icons li.title
     {
       margin-right:15px;
@@ -131,6 +150,7 @@
       font-weight:700;
       font-size:13px
     }
+
     .social-icons a{
       background-color:#eceeef;
       color:#818a91;
@@ -146,11 +166,13 @@
       -o-transition:all .2s linear;
       transition:all .2s linear
     }
+
     .social-icons a:active,.social-icons a:focus,.social-icons a:hover
     {
       color:#fff;
       background-color:#29aafe
     }
+
     .social-icons.size-sm a
     {
       line-height:34px;
@@ -158,22 +180,27 @@
       width:34px;
       font-size:14px
     }
+
     .social-icons a.facebook:hover
     {
       background-color:#3b5998
     }
+
     .social-icons a.twitter:hover
     {
       background-color:#00aced
     }
+
     .social-icons a.linkedin:hover
     {
       background-color:#007bb6
     }
+
     .social-icons a.dribbble:hover
     {
       background-color:#ea4c89
     }
+    
     @media (max-width:767px)
     {
       .social-icons li.title
@@ -216,8 +243,6 @@
         right: 2%;
         top: 75%;
     }
-
-
     </style>
 
 </head>
@@ -228,9 +253,10 @@
     <!-- Brand and toggle get grouped for better mobile display -->
 
     <div class="navbar-header">
-        <img class="navbar-header-logo" src="logo.jpg" alt="logo" style="/*width:225px;height:35px; padding-bottom: 2px;*/">
+        <img class="navbar-header-logo" src="{% static 'images/doge.png' %}" alt="logo" width="225px" height="235px">
       <a class="navbar-brand" style="font-size: 3em" href="{% url 'home-index' %}">Habitat</a>
         <a><p class="username">Username</p></a>
+        
     </div>
   </div><!-- /.container-fluid -->
 </nav>
