@@ -1,4 +1,3 @@
-{% load static %}
 <!doctype html>
 <html lang="en">
 <head>
@@ -6,34 +5,275 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="{% static 'css/base.css' %}" rel="stylesheet">
-    <title>Habitat</title>
+    <title>Document</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    {% load static %}
+
+    <style>
+
+        footer
+        {
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        .site-footer
+        {
+      background-color:#26272b;
+      padding:20px 0 3px;
+      font-size:15px;
+      line-height:24px;
+      color:#737373;
+    }
+    .site-footer hr
+    {
+      border-top-color:#bbb;
+      opacity:0.5
+    }
+    .site-footer hr.small
+    {
+      margin:20px 0
+    }
+    .site-footer h6
+    {
+      color:#fff;
+      font-size:16px;
+      text-transform:uppercase;
+      margin-top:5px;
+      letter-spacing:2px
+    }
+    .site-footer a
+    {
+      color:#737373;
+    }
+    .site-footer a:hover
+    {
+      color:#3366cc;
+      text-decoration:none;
+    }
+    .footer-links
+    {
+      padding-left:0;
+      list-style:none
+    }
+    .footer-links li
+    {
+      display:block
+    }
+    .footer-links a
+    {
+      color:#737373
+    }
+    .footer-links a:active,.footer-links a:focus,.footer-links a:hover
+    {
+      color:#3366cc;
+      text-decoration:none;
+    }
+    .footer-links.inline li
+    {
+      display:inline-block
+    }
+    .site-footer .social-icons
+    {
+      text-align:right
+    }
+    .site-footer .social-icons a
+    {
+      width:40px;
+      height:40px;
+      line-height:40px;
+      margin-left:6px;
+      margin-right:0;
+      border-radius:100%;
+      background-color:#33353d
+    }
+    .copyright-text
+    {
+      margin:0
+    }
+    @media (max-width:991px)
+    {
+      .site-footer [class^=col-]
+      {
+        margin-bottom:30px
+      }
+    }
+    @media (max-width:767px)
+    {
+      .site-footer
+      {
+        padding-bottom:0
+      }
+      .site-footer .copyright-text,.site-footer .social-icons
+      {
+        text-align:center
+      }
+    }
+    .social-icons
+    {
+      padding-left:0;
+      margin-bottom:0;
+      list-style:none
+    }
+    .social-icons li
+    {
+      display:inline-block;
+      margin-bottom:4px
+    }
+    .social-icons li.title
+    {
+      margin-right:15px;
+      text-transform:uppercase;
+      color:#96a2b2;
+      font-weight:700;
+      font-size:13px
+    }
+    .social-icons a{
+      background-color:#eceeef;
+      color:#818a91;
+      font-size:16px;
+      display:inline-block;
+      line-height:44px;
+      width:44px;
+      height:44px;
+      text-align:center;
+      margin-right:8px;
+      border-radius:100%;
+      -webkit-transition:all .2s linear;
+      -o-transition:all .2s linear;
+      transition:all .2s linear
+    }
+    .social-icons a:active,.social-icons a:focus,.social-icons a:hover
+    {
+      color:#fff;
+      background-color:#29aafe
+    }
+    .social-icons.size-sm a
+    {
+      line-height:34px;
+      height:34px;
+      width:34px;
+      font-size:14px
+    }
+    .social-icons a.facebook:hover
+    {
+      background-color:#3b5998
+    }
+    .social-icons a.twitter:hover
+    {
+      background-color:#00aced
+    }
+    .social-icons a.linkedin:hover
+    {
+      background-color:#007bb6
+    }
+    .social-icons a.dribbble:hover
+    {
+      background-color:#ea4c89
+    }
+    @media (max-width:767px)
+    {
+      .social-icons li.title
+      {
+        display:block;
+        margin-right:0;
+        font-weight:600
+      }
+    }
+
+    .col-xs-6
+    {
+        border: 4px solid white;
+        left: 18.5em;
+    }
+
+    .container-fluid
+    {
+        height: 8em;
+    }
+
+    .navbar-brand
+    {
+        border: 4px solid black;
+        position:absolute;
+        top: 15%;
+        left:45%;
+
+    }
+
+    .navbar-header-logo
+    {
+        position: absolute;
+        left:35%;
+    }
+
+    .username
+    {
+        position: absolute;
+        right: 2%;
+        top: 75%;
+    }
+
+
+    </style>
+
 </head>
 <body>
 
-<header>
-<div id="container">
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
 
-<div class="box1">
-<a href="{% url 'home-index' %}"> <img src="{% static 'images/doge.png' %}"  alt="Doge_pic" width="100px" height="100px" id="doge"> </a>
-</div>
+    <div class="navbar-header">
+        <img class="navbar-header-logo" src="logo.jpg" alt="logo" style="/*width:225px;height:35px; padding-bottom: 2px;*/">
+      <a class="navbar-brand" style="font-size: 3em" href="{% url 'home-index' %}">Habitat</a>
+        <a><p class="username">Username</p></a>
+    </div>
+  </div><!-- /.container-fluid -->
+</nav>
 
-<div class="box2">
-<a href="{% url 'home-index' %}"> <img src="{% static 'images/habitat.png' %}" alt="hab_pic" width="100px" height="100px" id="hab"> </a>
-</div>
-
-<div class="box3">
-<a href="{% url 'users-index' %}"> <img src="{% static 'images/default_user.png' %}" alt="profile_pic" width="50px" height="50px" id="default_user"> </a>
-*Placeholder_name*
-</div>
-
-<span class="stretch"></span>
-</div>
-
-</header>
+    <div class="container">
     {% block content %}
 
 
     {% endblock %}
+    </div>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<!-- Here we are going to putt a footer -->
+
+    <footer>
+        <footer class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-6">
+            <h6>About Habitat</h6>
+            <p class="text-justify">Habitat, <i>free your beast and claim your home. </i> We here in Habitat believe in the freedom of housing.</p>
+          </div>
+
+          <div class="col-xs-6 col-md-3">
+            <h6>Information Links</h6>
+            <ul class="footer-links">
+              <li>Contact us over email <a href="mailto:pserekkicool@gmail.com"> habitat@gmail.com</a></li>
+            </ul>
+          </div>
+        </div>
+        <hr>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-sm-6 col-xs-12">
+            <p class="copyright-text">Copyright &copy; 2017 All Rights Reserved by <a href="#">Scanfcode</a>.</p>
+          </div>
+        </div>
+      </div>
+
+    </footer>
+
 </body>
 </html>

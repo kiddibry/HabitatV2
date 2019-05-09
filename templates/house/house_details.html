@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2>{{ house.name }}</h2>
+{% for house_image in house.houseimage_set.all %}
+    <img src="{{ house_image.image }}" alt="image">
+{% endfor %}
+<p>Price: {{ house.price }}  |  Size: {{ house.size }}</p>
+<p>Seller:<a href="/users/{{ house.seller_id }}">{{ house.seller.name }}</a></p>
+
+{% endblock %}

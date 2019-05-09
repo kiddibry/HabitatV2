@@ -24,5 +24,5 @@ urlpatterns = [
     path('find_your_home/', include('find_your_home.urls')),
     path('admin/', admin.site.urls),
     path('houses/', include('house.urls')),
-    path('user/', include('user.urls')),
+    path('users/', include('user.urls')),
 ]
