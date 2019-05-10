@@ -1,0 +1,18 @@
+section {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.profiles { 
+    min-width: 0;
+    margin: 10px;
+    border: 1px solid;
+}
+
+img {
+    width: 45%;
+    height: 45%;
+    max-width: 100%; 
+    max-height: 450px; 
+}
