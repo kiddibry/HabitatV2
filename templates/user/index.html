@@ -1,10 +1,14 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% block content %}
-
+<link rel="stylesheet" href="{% static 'css/user_detail.css' %}">
 <h3>Users</h3>
+<section>
+    <div class="profiles">
 {% for user in users %}
     {% include 'user/single_user.html' with user=user %}
 {% endfor %}
+    </div>
+</section>
 
 {% endblock %}
