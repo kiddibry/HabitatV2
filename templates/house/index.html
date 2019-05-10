@@ -1,14 +1,23 @@
 {% extends 'base.html' %}
 
-{% block content %}
+{% load static %}
 
-<h3>Houses</h3>
-<div class="input-group">
-    <input type="search" class="form-control" id="search-box" placeholder="Enter your search here.. " />
-    <div class="input-group-btn">
-        <button type="button" id="search-btn" class="btn btn-default">Search</button>
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{%static 'css/house_detail.css'%}">
+
+<div class="title">
+    <p>Houses</p>
+</div>
+
+<div class="searchBar">
+    <div class="input-group">
+        <input type="search" class="form-control" id="search-box" placeholder="Enter your search here.. " />
+        <div class="input-group-btn">
+            <button type="button" id="search-btn" class="btn btn-default"> Search</button>
+        </div>
     </div>
 </div>
+
 <div class="houses">
     {% for house in houses %}
         {% include 'house/single_house.html' with house=house %}
