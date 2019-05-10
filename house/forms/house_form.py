@@ -10,8 +10,7 @@ class HouseUpdateForm(ModelForm):
         widgets = {
             'name': widgets.TextInput(attrs={'class': 'form-control'}),
             'description': widgets.TextInput(attrs={'class': 'form-control'}),
-            'category': widgets.Select(attrs={'class': 'form-control'}),
-
+            'category': widgets.Select(attrs={'class': 'form-control'})
         }
 
 
@@ -28,3 +27,4 @@ class HouseCreateForm(ModelForm):
             'size': widgets.TextInput(attrs={'class': 'form-control'}),
             'price': widgets.TextInput(attrs={'class': 'form-control'}),
         }
+

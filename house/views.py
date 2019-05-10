@@ -30,7 +30,9 @@ def create_house(request):
     if request.method == 'POST':
         form = HouseCreateForm(data=request.POST)
         if form.is_valid():
-            house = form.save()
+            house = form.save(commit=False)
+            house.seller = request.user.profile
+            house.save()
             house_image = HouseImage(image=request.POST['image'], house=house)
             house_image.save()
             return redirect('house-index')
