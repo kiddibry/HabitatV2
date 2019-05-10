@@ -16,3 +16,7 @@
 .list-group {
     text-emphasis: mute;
 }
+
+#usr_house {
+    border:1px solid;
+}

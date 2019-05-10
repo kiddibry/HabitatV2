@@ -20,7 +20,7 @@
             <ul class="list-group">
                 <li class="list-group-item text-muted">Info</li>
                 <li class="list-group-item text-right"><span class="pull-left"><strong>Joined: </strong></span>{{ user.created }} *placeholder*</li>
-                <li class="list-group-item text-right"><span class="pull-left"><strong>Real name: </strong></span>{{ user.name }} *placeholder</li>
+                <li class="list-group-item text-right"><span class="pull-left"><strong>Real name: </strong></span>{{ user.name }} *placeholder*</li>
 
             </ul>
 
@@ -33,13 +33,16 @@
             
 
         </div>
-        <!--/tab-content-->
         <h3>Houses on offer</h3>
         <hr>
-        Place all images of houses for sale here
+        
+        {% for house in houses %}
+        <div id="usr_house">
+            {% include 'house/single_house.html' with house=house %}
+        </div>
+        {% endfor %}
+        place houses the user has on offer here
     </div>
-    <!--/col-9-->
 </div>
-<!--/row-->
 
 {% endblock %}
