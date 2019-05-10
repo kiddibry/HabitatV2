@@ -4,11 +4,19 @@
 }
 
 #user_det {
-    text-align: left;
+    text-align: right;
     border: 1px solid;
     white-space: nowrap;
 }
 
 #placeholder {
     margin-bottom: 100%;
+}
+
+.list-group {
+    text-emphasis: mute;
+}
+
+#usr_house {
+    border:1px solid;
 }
