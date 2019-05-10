@@ -7,5 +7,5 @@ class Profile(models.Model):
     profile_image = models.CharField(max_length=999, blank=True)
 
     def __str__(self):
-        return self.name
+        return self.user.username
 
