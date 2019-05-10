@@ -6,13 +6,12 @@ from django import forms
 class HouseUpdateForm(ModelForm):
     class Meta:
         model = House
-        exclude = ['id']
+        exclude = ['id', 'on_sale', 'seller']
         widgets = {
             'name': widgets.TextInput(attrs={'class': 'form-control'}),
             'description': widgets.TextInput(attrs={'class': 'form-control'}),
             'category': widgets.Select(attrs={'class': 'form-control'}),
-            'seller': widgets.Select(attrs={'class': 'form-control'}),
-            'on_sale': widgets.CheckboxInput(attrs={'class': 'checkbox'})
+
         }
 
 
@@ -21,11 +20,11 @@ class HouseCreateForm(ModelForm):
 
     class Meta:
         model = House
-        exclude = ['id']
+        exclude = ['id', 'seller', 'on_sale']
         widgets = {
             'name': widgets.TextInput(attrs={'class': 'form-control'}),
             'description': widgets.TextInput(attrs={'class': 'form-control'}),
             'category': widgets.Select(attrs={'class': 'form-control'}),
-            'seller': widgets.Select(attrs={'class': 'form-control'}),
-            'on_sale': widgets.CheckboxInput(attrs={'class': 'checkbox'})
+            'size': widgets.TextInput(attrs={'class': 'form-control'}),
+            'price': widgets.TextInput(attrs={'class': 'form-control'}),
         }
