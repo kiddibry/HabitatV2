@@ -2,17 +2,44 @@
 {% load static %}
 {% block content %}
 <link rel="stylesheet" href="{% static 'css/user_detail.css' %}">
-<h2>{{ user.name }}</h2>
+<hr>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-10">
+            <h1>{{ user.username }}</h1></div>
+        <div class="col-sm-2">
+            <a href="/users" class="pull-right"><img title="profile image" class="img-circle img-responsive" src="{% static 'images/doge.png' %}"></a>
+                                                                                                                    <!--{{ user.image }}-->
+        </div>
+    </div>
 
-<div id="user_img">
-    <img src="{{ user.image }}" class="w3-border w3-padding" alt="image">
+    <div class="row">
+        <div class="col-sm-3">
+            <!--left col-->
+
+            <ul class="list-group">
+                <li class="list-group-item text-muted">Info</li>
+                <li class="list-group-item text-right"><span class="pull-left"><strong>Joined: </strong></span>{{ user.created }} *placeholder*</li>
+                <li class="list-group-item text-right"><span class="pull-left"><strong>Real name: </strong></span>{{ user.name }} *placeholder</li>
+
+            </ul>
+
+            <ul class="list-group">
+                <li class="list-group-item text-muted">Selling Points <i class="fa fa-dashboard fa-1x"></i></li>
+                <li class="list-group-item text-right"><span class="pull-left"><strong>Houses for sale</strong></span> 125</li>
+                <li class="list-group-item text-right"><span class="pull-left"><strong>Houses Sold</strong></span> 13</li>
+                <li class="list-group-item text-right"><span class="pull-left"><strong>Dicks Sucked</strong></span> 37</li>
+            </ul>
+            
+
+        </div>
+        <!--/tab-content-->
+        <h3>Houses on offer</h3>
+        <hr>
+        Place all images of houses for sale here
+    </div>
+    <!--/col-9-->
 </div>
-
-<div id="user_det">
-    <p>username: {{ user.username }}</p>
-    <p>Started: {{ user.created }}</p>
-</div>
-
-<div id="placeholder"><br>Words<br></div>
+<!--/row-->
 
 {% endblock %}
