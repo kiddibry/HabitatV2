@@ -1,0 +1,93 @@
+ .searchBar
+{
+
+    text-align: center;
+
+}
+
+.search
+{
+
+}
+
+.searchTerm{
+    width: 80%;
+    height: 2.5em;
+    border: 2px solid black;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 1.2em;
+    margin-top: 2px;
+}
+
+.searchButton{
+    width: 8%;
+    height: 2.5em;
+    border-radius: 5px;
+    padding-top: 8px;
+}
+
+.chooseBox
+{
+    text-align: center;
+    float: left;
+    margin-left: 15%;
+    margin-top: 1em;
+    margin-bottom: 1.5em;
+    width: 100%;
+}
+
+.allBox
+{
+    display: flex;
+    height: 6em;
+}
+
+.findBox
+{
+    border: 5px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    margin-right: 5em;
+}
+
+.sellBox
+{
+    border: 5px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    margin-right: 5em;
+}
+
+.merchBox
+{
+    border: 5px solid black;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+
+.homes
+{
+    margin-bottom: 1em;
+    text-align: center;
+    border: 4px solid black;
+    overflow: auto;
+    height: 10em;
+    width: 100%;
+}
+
+.info
+{
+
+}
+
+.photo
+{
+
+}
+
+.prize
+{
+
+}
