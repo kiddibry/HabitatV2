@@ -31,7 +31,7 @@
 {
     text-align: center;
     float: left;
-    margin-left: 12%;
+    margin-left: 15%;
     margin-top: 1em;
     margin-bottom: 1.5em;
     width: 100%;
@@ -48,7 +48,7 @@
     border: 5px solid black;
     border-radius: 5px;
     padding: 10px;
-    margin-right: 4em;
+    margin-right: 5em;
 }
 
 .sellBox
@@ -56,18 +56,11 @@
     border: 5px solid black;
     border-radius: 5px;
     padding: 10px;
-    margin-right: 4em;
+    margin-right: 5em;
 }
 
 .merchBox
 {
-    border: 5px solid black;
-    border-radius: 5px;
-    padding: 10px;
-    margin-right: 4em;
-}
-
-.aboutUsBox{
     border: 5px solid black;
     border-radius: 5px;
     padding: 10px;
