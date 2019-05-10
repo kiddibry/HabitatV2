@@ -1,10 +1,18 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% block content %}
-
+<link rel="stylesheet" href="{% static 'css/user_detail.css' %}">
 <h2>{{ user.name }}</h2>
-<img src="{{ user.image }}" alt="image">
-<p>username: {{ user.username }}</p>
-<p>Started: {{ user.created }}</p>
+
+<div id="user_img">
+    <img src="{{ user.image }}" class="w3-border w3-padding" alt="image">
+</div>
+
+<div id="user_det">
+    <p>username: {{ user.username }}</p>
+    <p>Started: {{ user.created }}</p>
+</div>
+
+<div id="placeholder"><br>Words<br></div>
 
 {% endblock %}
