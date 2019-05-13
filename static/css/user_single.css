@@ -1,0 +1,10 @@
+#usr_image {
+    margin-top: 10%;
+    width: 256px;
+    height: 256px;
+    border-radius: 50%;
+}
+
+#container {
+    margin: 10px;
+}
