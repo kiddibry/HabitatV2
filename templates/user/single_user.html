@@ -1,8 +1,12 @@
 {% load static %}
-<div>
+<link rel="stylesheet" href="{% static 'css/user_single.css' %}">
+<div class="col-sm-3" id="container">
     <a href="/users/{{ user.id }}">
-        <h4>{{ user.name }}</h4>
-        <img src="{{ user.userimage_set.first.image }}" alt="image">
-        <p>Started: {{ user.created }}</p>
-    </a>
-</div>
+        <img src="{% static 'images/doge.png' %}" id="usr_image" alt="profile_image">
+        <!--{{ user.userimage_set.first.image }}-->
+        </a>
+        <ul class="list-group"></ul>
+        <li class="list-group-item text-right"><span class="pull-left"><strong>Username:  </strong></span>{{ user.name }} *placeholder*</li>
+        <li class="list-group-item text-right"><span class="pull-left"><strong>Started: </strong></span>{{ user.created }} *placeholder*</li>
+    </ul>
+    </div>
