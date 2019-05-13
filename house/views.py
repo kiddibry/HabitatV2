@@ -60,8 +60,22 @@ def update_house(request, id):
             return redirect('house_details', id=id)
     else:
         form = HouseUpdateForm(instance=instance)
-        print(2)
     return render(request, 'house/update_house.html', {
         'form': form,
         'id': id
+    })
+
+
+@login_required
+def buy_house(request, id):
+    instance = get_object_or_404(House, pk=id)
+    if request.method == 'POST':
+        instance.delete()
+        return redirect('house_bought', id=id)
+    return render(request, 'house/buy_house.html')
+
+
+def bought(request, id):
+    return render(request, 'house/bought.html', {
+        'house': get_object_or_404(House, pk=id)
     })

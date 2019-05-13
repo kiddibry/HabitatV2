@@ -15,6 +15,7 @@ class House(models.Model):
     description = models.CharField(max_length=999, blank=True)
     size = models.CharField(max_length=255)
     category = models.ForeignKey(HouseCategory, on_delete=models.CASCADE)
+    postal_code = models.IntegerField(max_length=255)
     on_sale = models.BooleanField(default=True)
     seller = models.ForeignKey(Profile, on_delete=models.CASCADE)
 

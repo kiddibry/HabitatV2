@@ -7,4 +7,6 @@ urlpatterns = [
     path('sell', views.create_house, name='create_house'),
     path('delete_house/<int:id>', views.delete_house, name='delete_house'),
     path('update_house/<int:id>', views.update_house, name='update_house'),
+    path('buy/<int:id>', views.buy_house, name='buy'),
+    path('bought/<int:id>', views.bought, name='house_bought')
 ]

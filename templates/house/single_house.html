@@ -1,8 +1,31 @@
-<div>
-    <a href="/houses/{{ house.id }}">
-        <h4>{{ house.name }}</h4>
-        <img src="{{ house.houseimage_set.first.image }}" alt="image">
-        <p>size:{{ house.size }} price:{{ house.price }}</p>
-        <p>description:{{ house.description }}</p>
-    </a>
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{%static 'css/single_house.css'%}">
+
+
+<div class="single_house">
+    <div class="house">
+        <a href="/houses/{{ house.id }}">
+
+
+            <div class="name">
+                <fieldset>
+                    <legend>{{ house.name }}</legend>
+                    <div class="description">
+                        <p>Description:{{ house.description }}</p>
+                    </div>
+                </fieldset>
+            </div>
+
+            <div class="size">
+                <p>Size:{{ house.size }} M<sup>2</sup> price:{{ house.price }} krónur</p>
+            </div>
+
+            <div class="photo_frame">
+                <div class="photo">
+                    <img src="{{ house.houseimage_set.first.image }}" alt="image">
+                </div>
+            </div>
+
+        </a>
+    </div>
 </div>
