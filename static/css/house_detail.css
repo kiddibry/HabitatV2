@@ -21,8 +21,11 @@ img {
     text-align: center;
 }
 
-/* Hér byrjar CSS fyrir templates/house/index.html   */
+/*###################################################
+# Hér byrjar CSS fyrir templates/house/index.html   #
+################################################### */
 
+/*----- titill og search barinn------*/
 .title {
     text-align: center;
     font-size: 40px;
@@ -58,6 +61,68 @@ img {
     margin-right: 20px;
 }
 
+/*------ Order by ------- */
+
+
+.Choose {
+    /*border: 4px solid black;*/
+    margin-top: 2em;
+    font-size: 1.5em;
+
+    display: flex;
+
+}
+
+.Order_by {
+    float: left;
+    padding-right: 0.5em;
+}
+
+.Price_range {
+    padding-left: 0.5em;
+}
+
+.slidecontainer {
+    margin-top: 0.5em;
+    width: 40%;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 10px;
+  border-radius: 5px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 25px;
+  border-radius: 50%;
+  background: orange;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: orange;
+  cursor: pointer;
+}
+
+
+/*------Houses-------*/
 .houses {
     border: 5px solid black;
     margin-top: 1.5em;
