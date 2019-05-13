@@ -10,9 +10,9 @@ def index(request):
     return render(request, 'user/index.html', context)
 
 
-def get_user_by_id(request, id):
+def get_seller_by_id(request, id):
     return render(request, 'user/user_details.html', {
-        'user': get_object_or_404(User, pk=id)
+        'seller': get_object_or_404(User, pk=id)
     })
 
 
