@@ -20,3 +20,15 @@
 #usr_house {
     border:1px solid;
 }
+
+#profile_pic {
+    height: 10%;
+    width: 10%;
+}
+
+.button_secondary {
+    color: white;
+    border-radius: 4px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    background: rgb(66, 184, 221);
+}
