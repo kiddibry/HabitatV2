@@ -68,14 +68,15 @@ def update_house(request, id):
 
 @login_required
 def buy_house(request, id):
-    instance = get_object_or_404(House, pk=id)
     if request.method == 'POST':
-        instance.delete()
         return redirect('house_bought', id=id)
     return render(request, 'house/buy_house.html')
 
 
+@login_required()
 def bought(request, id):
+    instance = get_object_or_404(House, pk=id)
+    instance.delete()
     return render(request, 'house/bought.html', {
-        'house': get_object_or_404(House, pk=id)
+        'house': instance
     })
