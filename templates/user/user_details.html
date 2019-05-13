@@ -6,9 +6,9 @@
 <div class="container">
     <div class="row">
         <div class="col-sm-10">
-            <h1>{{ user.username }}</h1></div>
+            <h1>{{seller.profile.name}}</h1></div>
         <div class="col-sm-2">
-            <a href="/users" class="pull-right"><img title="profile image" class="img-circle img-responsive" src="{% static 'images/doge.png' %}"></a>
+            <a href="/users" class="pull-right"><img title="profile image" class="img-circle img-responsive" src="{{seller.profile.profile_image}}" alt="profile_image"></a>
                                                                                                                     <!--{{ user.image }}-->
         </div>
     </div>
