@@ -1,0 +1,43 @@
+
+.single_house {
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+.house {
+    border: 2px solid black;
+}
+
+.name {
+    border: 2px solid black;
+    float: left;
+    margin-left: 0.5em;
+    margin-top: 0.5em;
+    height: 25rem;
+}
+
+.photo_frame {
+    /*border: 4px solid blue;*/
+}
+.photo {
+}
+
+img {
+    border: 1px solid black;
+    border-radius: 20px;
+}
+
+.size {
+    border: 2px solid black;
+    background-color: white;
+    float: left;
+    position:relative;
+    top: 30%;
+    left: ;
+}
+
+.description {
+
+    float: left;
+
+}
