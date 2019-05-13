@@ -1,7 +1,7 @@
-{% load static %}
 <!doctype html>
 <html lang="en">
 <head>
+    {% load static %}
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -9,8 +9,6 @@
     <title>Habitat&trade;</title>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
 </head>
 <body>
@@ -22,26 +20,22 @@
     <div class="navbar-header">
         <!-- <img class="navbar-header-logo" src="{% static 'images/doge.png' %}" alt="logo" width="225px" height="235px"> -->
       <a class="navbar-brand" style="font-size: 3em" href="{% url 'home-index' %}">Habitat</a>
-        <li><a href="{% url 'merch-index' %}">Merch <span class="sr-only">(current)</span></a></li>
-        <li><a href="{% url 'home-index' %}">Home</a></li>
-        <div class="user_and_img">
         {% if user.is_authenticated %}
-                <a href="{% url 'profile' %}" class="username"><img src="{{user.profile.profile_image}}" class="username" width="50px" height="50px"></a>
-                <a href="{% url 'profile' %}" class="username">{{user.profile.user.username}}</a>
-            {% endif %}
+        <div id="user_profile">
+                <a href="{% url 'profile' %}"><img src="{{user.profile.profile_image}}" width="50px" height="50px" id="prof_img"></a>
+                <a href="{% url 'profile' %}">{{user.profile.user.username}}</a>
         </div>
+            {% endif %}
         <div class="loginsign">
             {% if user.is_authenticated %}
-                <a href="{% url 'logout' %}">Logout</a>
+            <button type="button"><a href="{% url 'logout' %}">Logout</a></button>
             {% else %}
-                <a href="{% url 'login' %}">Login</a>
-                <a href="{% url 'register' %}">Sign up</a>
+                <button type="button"><a href="{% url 'login' %}">Login</a></button>
+                <button type="button"><a href="{% url 'register' %}">Sign up</a></button>
             {% endif %}
-
-
         </div>
     </div>
-  </div><!-- /.container-fluid -->
+  </div>
 </nav>
 
     <div class="container">
@@ -77,7 +71,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-8 col-sm-6 col-xs-12">
-            <p class="copyright-text">Copyright &copy; 2019 All Rights Reserved by <a href="#">Habitat&trade;</a>.</p>
+            <p class="copyright-text">Copyright &copy; 2019 All Rights Reserved by Habitat&trade;.</p>
           </div>
         </div>
       </div>
