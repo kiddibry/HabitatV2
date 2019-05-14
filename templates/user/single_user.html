@@ -2,11 +2,13 @@
 <link rel="stylesheet" href="{% static 'css/user_single.css' %}">
 <div class="col-sm-3" id="container">
     <a href="/users/{{ user.id }}">
-        <img src="{% static 'images/doge.png' %}" id="usr_image" alt="profile_image">
+        <img src="{{user.profile.profile_image}}" id="usr_image" alt="profile_image">
         <!--{{ user.userimage_set.first.image }}-->
         </a>
         <ul class="list-group"></ul>
-        <li class="list-group-item text-right"><span class="pull-left"><strong>Username:  </strong></span>{{ user.name }} *placeholder*</li>
-        <li class="list-group-item text-right"><span class="pull-left"><strong>Started: </strong></span>{{ user.created }} *placeholder*</li>
+    </ul>
+        <li class="list-group-item text-right"><span class="pull-left"><strong>Real name:  </strong></span>{{ user.profile.name}}</li>
+        <li class="list-group-item text-right"><span class="pull-left"><strong>Username:  </strong></span>{{ user.username }}</li>
+        <li class="list-group-item text-right"><span class="pull-left"><strong>Joined: </strong></span>{{ user.date_joined }}</li>
     </ul>
     </div>
