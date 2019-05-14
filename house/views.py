@@ -1,7 +1,7 @@
-from django.contrib.auth.decorators import login_required
+from django.contrib.auth.decorators import login_required, user_passes_test
 from django.http import JsonResponse
 from django.shortcuts import render, get_object_or_404, redirect
-from house.forms.house_form import HouseCreateForm, HouseUpdateForm
+from house.forms.house_form import HouseCreateForm, HouseUpdateForm, HouseAddImagesForm
 from house.models import House, HouseImage
 
 
@@ -45,6 +45,8 @@ def create_house(request):
 
 @login_required
 def delete_house(request, id):
+    if request.user.profile != get_object_or_404(House, pk=id).seller:
+        return redirect('house_details', id=id)
     house = get_object_or_404(House, pk=id)
     house.delete()
     return redirect('house-index')
@@ -52,6 +54,8 @@ def delete_house(request, id):
 
 @login_required
 def update_house(request, id):
+    if request.user.profile != get_object_or_404(House, pk=id).seller:
+        return redirect('house_details', id=id)
     instance = get_object_or_404(House, pk=id)
     if request.method == 'POST':
         form = HouseUpdateForm(data=request.POST, instance=instance)
@@ -80,3 +84,24 @@ def bought(request, id):
     return render(request, 'house/bought.html', {
         'house': instance
     })
+
+
+def add_images(request, id):
+    if request.user.profile != get_object_or_404(House, pk=id).seller:
+        return redirect('house_details', id=id)
+    else:
+        instance = get_object_or_404(House, pk=id)
+        if request.method == 'POST':
+            form = HouseAddImagesForm(data=request.POST)
+            if form.is_valid():
+                image = form.save(commit=False)
+                image.house = instance
+                image.save()
+                return redirect('house_details', id=id)
+        else:
+            form = HouseAddImagesForm(instance=instance)
+        return render(request, 'house/add_images.html', {
+            'form': form,
+            'id': id
+        })
+

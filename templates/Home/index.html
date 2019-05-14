@@ -8,12 +8,15 @@
 
     <h2 style="text-align: center">Find your new<u><p id="ran_hom">____</p></u></h2>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+    <script src="{% static 'js/houses.js' %}"></script>
+
     <div class="searchBar">
-        <div class="search">
-            <input type="text" class="searchTerm" placeholder=" Search for your new home  ">
-            <button type="submit" class="searchButton">
-                <i class="fa fa-search"><p>Search</p></i>
-            </button>
+        <div class="input-group">
+            <input type="search" class="form-control" id="search-box" placeholder="Enter your search here.. " />
+            <div class="input-group-btn">
+                <button type="button" id="search-btn" class="btn btn-default"> Search</button>
+            </div>
         </div>
     </div>
 
@@ -26,12 +29,11 @@
     </div>
 
 
-
+    <div class="houses">
         {% for house in houses %}
         {% include 'house/single_house.html' with house=house %}
         {% endfor %}
-
-
+    </div>
 
     <!--The script is loaded intentionally here, don't move it.-->
     <script src="{% static 'js/random_home.js' %}"></script>

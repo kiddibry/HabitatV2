@@ -1,5 +1,5 @@
 from django.forms import ModelForm, widgets
-from house.models import House
+from house.models import House, HouseImage
 from django import forms
 
 
@@ -29,3 +29,11 @@ class HouseCreateForm(ModelForm):
             'price': widgets.TextInput(attrs={'class': 'form-control'}),
         }
 
+
+class HouseAddImagesForm(ModelForm):
+    class Meta:
+        model = HouseImage
+        exclude = ['id', 'house']
+        widgets = {
+            'image': widgets.TextInput(attrs={'class': 'form-control'})
+        }
