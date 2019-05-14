@@ -30,16 +30,17 @@
 
         {% if user.is_authenticated %}
         <div id="user_profile">
-                <a href="{% url 'profile' %}"><img src="{{user.profile.profile_image}}" width="50px" height="50px" id="prof_img"></a>
-                <a href="{% url 'profile' %}" style="color:white">{{user.profile.user.username}}</a>
+                <a href="/users/{{ user.id }}"><img src="{{user.profile.profile_image}}" width="50px" height="50px" id="prof_img"></a>
+                <a href="/users/{{ user.id }}" style="color:white">{{user.profile.user.username}}</a>
         </div>
             {% endif %}
         <div class="loginsign">
             {% if user.is_authenticated %}
-            <button type="button"><a href="{% url 'logout' %}">Logout</a></button>
+            <a href="{% url 'logout' %}"><input type="button" class="btn tbn-primary" value="Logout" id="lgt"></a>
+            <a href="/users/profile"><input type="button" class="btn tbn-primary" value="Edit profile"></a>
             {% else %}
-                <button type="button"><a href="{% url 'login' %}">Login</a></button>
-                <button type="button"><a href="{% url 'register' %}">Sign up</a></button>
+                <a href="{% url 'login' %}"><input type="button" class="btn tbn-primary" value="Login" id="lgn"></a>
+                <a href="{% url 'register' %}"><input type="button" class="btn tbn-primary" value="Sign in"></a>
             {% endif %}
         </div>
     </div>
