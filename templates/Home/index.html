@@ -13,7 +13,7 @@
 
     <div class="searchBar">
         <div class="input-group">
-            <input type="search" class="form-control" id="search-box" placeholder="Enter your search here.. " />
+            <input type="search" class="form-control" id="search-box" placeholder="Search for your next home " />
             <div class="input-group-btn">
                 <button type="button" id="search-btn" class="btn btn-default"> Search</button>
             </div>
@@ -34,6 +34,7 @@
         {% include 'house/single_house.html' with house=house %}
         {% endfor %}
     </div>
+
 
     <!--The script is loaded intentionally here, don't move it.-->
     <script src="{% static 'js/random_home.js' %}"></script>

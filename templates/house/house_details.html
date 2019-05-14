@@ -18,8 +18,15 @@
     <h4>{{ house.description }}</h4>
     <p>Price: {{ house.price }}  |  Size: {{ house.size }}m²</p>
     <p>Seller:<a href="/users/{{ house.seller_id }}">{{ house.seller.name }}</a></p>
+    {% if user.is_authenticated %}
+    {% if user.profile != house.seller %}
+    <a href="{% url 'buy' house.id%}" class="block btn btn-primary">BUY!!!!!</a>
+    {% endif%}
+    {% if user.profile == house.seller %}
     <a href="{% url 'delete_house' house.id%}" class="block btn btn-primary">Delete house</a>
     <a href="{% url 'update_house' house.id%}" class="block btn btn-primary">Update house</a>
+    {% endif %}
+    {% endif %}
 </div>
 
 {% endblock %}

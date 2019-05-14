@@ -1,31 +1,31 @@
- .searchBar
-{
+     .searchBar
+    {
 
-    text-align: center;
+        text-align: center;
 
-}
+    }
 
-.search
-{
+    .search
+    {
 
-}
+    }
 
-.searchTerm{
-    width: 80%;
-    height: 2.5em;
-    border: 2px solid black;
-    border-radius: 20px;
-    text-align: center;
-    font-size: 1.2em;
-    margin-top: 2px;
-}
+    .searchTerm{
+        width: 80%;
+        height: 2.5em;
+        border: 2px solid black;
+        border-radius: 20px;
+        text-align: center;
+        font-size: 1.2em;
+        margin-top: 2px;
+    }
 
-.searchButton{
+    .searchButton{
 
-    height: 2.5em;
-    border-radius: 5px;
-    padding-top: 8px;
-}
+        height: 2.5em;
+        border-radius: 5px;
+        padding-top: 8px;
+    }
 
 .chooseBox
 {
@@ -45,7 +45,7 @@
 
 .findBox
 {
-    border: 5px solid black;
+    border: 4px solid black;
     border-radius: 5px;
     padding: 10px;
     margin-right: 5em;
@@ -53,7 +53,7 @@
 
 .sellBox
 {
-    border: 5px solid black;
+    border: 4px solid black;
     border-radius: 5px;
     padding: 10px;
     margin-right: 5em;
@@ -61,7 +61,7 @@
 
 .merchBox
 {
-    border: 5px solid black;
+    border: 4px solid black;
     border-radius: 5px;
     padding: 10px;
 }
