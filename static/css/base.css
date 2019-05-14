@@ -168,5 +168,6 @@ footer
 }
 
 .navbar{
-    background-color: blue;
+    background-color: rgb(52, 52, 253);
+    border: 1px solid;
 }

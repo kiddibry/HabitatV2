@@ -4,6 +4,7 @@
     <form class="form form-horizontal" action="{% url 'create_house' %}" method="post">
         {% csrf_token %}
         {{ form }}
+        <br>
         <input type="submit" value="Put up for sale">
     </form>
 {% endblock %}
