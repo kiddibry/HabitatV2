@@ -9,7 +9,7 @@
 <section>
     <div class="images">
 {% for house_image in house.houseimage_set.all %}
-        <img src="{{ house_image.image }}" alt="Home">
+        <img src="{{ house_image.image }}" alt="house_img" class="hs_img">
 {% endfor %}
     </div>
 </section>
