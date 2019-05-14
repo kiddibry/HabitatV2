@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h3 style="text-align: center">Add images to your house</h3>
+    <form class="form form-horizontal" action="{% url 'add_images' id %}" method="post">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" value="Add image">
+    </form>
+{% endblock %}

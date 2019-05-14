@@ -9,8 +9,8 @@
 
 .name {
 
-    margin-top: 0.5em;
-    margin-left: 0.5em;
+    margin-top: 0.3em;
+    margin-left: 0.3em;
     border: 1px solid black;
     text-align: center;
     float: left;
@@ -53,8 +53,8 @@
     right: 0px;
     bottom: 0px;
     z-index: 3;
-    padding-left: 0.3em;
-    padding-right: 0.3em;
+    padding-left: 0.2em;
+    padding-right: 0.2em;
     color: black;
 
 }
