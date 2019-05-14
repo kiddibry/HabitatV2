@@ -4,11 +4,11 @@ $(document).ready(function(){
         var searchText = $('#search-box').val();
         $.ajax({
             url: '/houses?search_filter=' + searchText,
-            type: 'GET',
+                type: 'GET',
             success: function (resp) {
                 var newHtml = resp.data.map(d => {
                     return `<div>
-                                <a href="/houses/${d.id}">
+                                <a href="/houses/${d.id}">    
                                     <img src="${d.firstImage}" alt="image"/>
                                     <h4>${d.name}</h4>
                                     <p>${d.description}</p>

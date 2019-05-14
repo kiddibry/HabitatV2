@@ -1,4 +1,4 @@
-section {
+/*section {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -19,7 +19,7 @@ img {
 .description {
     padding-bottom: 5%;
     text-align: center;
-}
+} */
 
 /*###################################################
 # Hér byrjar CSS fyrir templates/house/index.html   #

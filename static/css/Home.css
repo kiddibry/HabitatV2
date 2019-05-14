@@ -21,7 +21,7 @@
 }
 
 .searchButton{
-    width: 8%;
+
     height: 2.5em;
     border-radius: 5px;
     padding-top: 8px;
@@ -29,9 +29,7 @@
 
 .chooseBox
 {
-    text-align: center;
     float: left;
-    margin-left: 15%;
     margin-top: 1em;
     margin-bottom: 1.5em;
     width: 100%;
@@ -40,7 +38,9 @@
 .allBox
 {
     display: flex;
-    height: 6em;
+    height: 100%;
+    float: left;
+    margin-left: 15%;
 }
 
 .findBox
@@ -71,7 +71,7 @@
 {
     margin-bottom: 1em;
     text-align: center;
-    border: 4px solid black;
+    border: 1px solid black;
     overflow: auto;
     height: 10em;
     width: 100%;
