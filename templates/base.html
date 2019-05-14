@@ -18,8 +18,12 @@
     <!-- Brand and toggle get grouped for better mobile display -->
 
     <div class="navbar-header">
-          <img class="navbar-header-logo" src="{% static 'images/thelogo.png' %}" alt="logo" width="80px" height="80px">
-          <a class="navbar-brand" href="{% url 'home-index' %}" style="color:white">Habitat</a>
+        <div class="bodycon">
+            <div class="column">
+              <img class="navbar-header-logo" src="{% static 'images/thelogo.png' %}" alt="logo" width="70px" height="70px">
+            </div>
+        <a class="navbar-brand" href="{% url 'home-index' %}" style="color:white">Habitat</a>
+        </div>
         {% if user.is_authenticated %}
         <div id="user_profile">
                 <a href="{% url 'profile' %}"><img src="{{user.profile.profile_image}}" width="50px" height="50px" id="prof_img"></a>
