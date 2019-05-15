@@ -6,11 +6,15 @@ from django import forms
 class HouseUpdateForm(ModelForm):
     class Meta:
         model = House
-        exclude = ['id', 'on_sale', 'seller']
+        exclude = ['id', 'seller']
         widgets = {
             'name': widgets.TextInput(attrs={'class': 'form-control'}),
             'description': widgets.TextInput(attrs={'class': 'form-control'}),
-            'category': widgets.Select(attrs={'class': 'form-control'})
+            'category': widgets.Select(attrs={'class': 'form-control'}),
+            'size': widgets.NumberInput(attrs={'class': 'form-control'}),
+            'price': widgets.NumberInput(attrs={'class': 'form-control'}),
+            'on_sale': widgets.CheckboxInput(),
+
         }
 
 
@@ -25,8 +29,8 @@ class HouseCreateForm(ModelForm):
             'postal_code': widgets.NumberInput(attrs={'class': 'form-control'}),
             'description': widgets.TextInput(attrs={'class': 'form-control'}),
             'category': widgets.Select(attrs={'class': 'form-control'}),
-            'size': widgets.TextInput(attrs={'class': 'form-control'}),
-            'price': widgets.TextInput(attrs={'class': 'form-control'}),
+            'size': widgets.NumberInput(attrs={'class': 'form-control'}),
+            'price': widgets.NumberInput(attrs={'class': 'form-control'}),
         }
 
 

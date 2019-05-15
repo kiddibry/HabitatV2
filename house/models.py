@@ -24,3 +24,18 @@ class HouseImage(models.Model):
     image = models.CharField(max_length=999)
     house = models.ForeignKey(House, on_delete=models.CASCADE)
 
+
+class HouseFilter(models.Model):
+    ORDER_CHOICES = (
+        ('name', 'Name lowest to highest'),
+        ('-name', 'Name highest to lowest'),
+        ('price', 'Price lowest to highest'),
+        ('-price', 'Price highest to lowest'),
+        ('size', 'Size lowest to highest'),
+        ('-size', 'Size highest to lowest')
+    )
+    order = models.CharField(max_length=30, choices=ORDER_CHOICES, default='name')
+    price_low = models.CharField(max_length=30, blank=True)
+    price_high = models.CharField(max_length=30, blank=True)
+    size_low = models.CharField(max_length=30, blank=True)
+    size_high = models.CharField(max_length=30, blank=True)

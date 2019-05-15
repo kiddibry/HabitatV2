@@ -2,6 +2,7 @@ from django.contrib.auth.decorators import login_required, user_passes_test
 from django.http import JsonResponse
 from django.shortcuts import render, get_object_or_404, redirect
 from house.forms.house_form import HouseCreateForm, HouseUpdateForm, HouseAddImagesForm
+from house.forms.filter_form import HouseFilterForm
 from house.models import House, HouseImage
 
 
@@ -15,8 +16,22 @@ def index(request):
             'firstImage': x.houseimage_set.first().image
         } for x in House.objects.filter(name__icontains=search_filter)]
         return JsonResponse({'data': houses})
-
-    context = {'houses': House.objects.all().order_by('name')}  # default er oder by name
+    context = {'houses': House.objects.all().order_by('name')}
+    houses = House.objects.all()
+    if request.method == 'GET':
+        filterForm = HouseFilterForm(request.GET)
+        if filterForm.is_valid():
+            if filterForm.cleaned_data["order"]:
+                houses = houses.order_by(filterForm.cleaned_data["order"])
+            if filterForm.cleaned_data["price_low"]:
+                houses = houses.filter(price__gte=filterForm.cleaned_data["price_low"])
+            if filterForm.cleaned_data["price_high"]:
+                houses = houses.filter(price__lte=filterForm.cleaned_data["price_high"])
+            if filterForm.cleaned_data["size_low"]:
+                houses = houses.filter(size__gte=filterForm.cleaned_data["size_low"])
+            if filterForm.cleaned_data["size_high"]:
+                houses = houses.filter(size__lte=filterForm.cleaned_data["size_high"])
+        context = {'houses': houses, 'form': filterForm}
     return render(request, 'house/index.html', context)
 
 
