@@ -17,3 +17,6 @@ def tshirts(request):
 def aboutmerch(request):
     return render(request, 'merch/aboutmerch.html')
 
+def buymerch(request):
+    return render(request, 'merch/buymerch.html')
+

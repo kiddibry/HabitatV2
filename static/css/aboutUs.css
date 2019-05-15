@@ -20,9 +20,13 @@ p{
 }
 
 .imageBox{
-    background-color: blue;
+    background-color: #0000b3;
     border-radius: 10px;
     border: 2px solid #000000;
+}
+
+.photokill {
+    width: 100%;
 }
 
 .aboutUsBox{
