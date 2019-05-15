@@ -23,14 +23,13 @@
 <div class="Choose">
     <div class="Order_by">
         <p>Order by: <select>
-                          <option value="Price lowest to highest">Price lowest to highest</option>
-                          <option value="Price highest to lowest">Price highest to lowest</option>
-                          <option value="Size lowest to highest">Size lowest to highest</option>
-                          <option value="Size highest to lowest">Size highest to lowest</option>
-                    </select></p>
+                <option value="Price lowest to highest">Price lowest to highest</option>
+                <option value="Price highest to lowest">Price highest to lowest</option>
+                <option value="Size lowest to highest">Size lowest to highest</option>
+                <option value="Size highest to lowest">Size highest to lowest</option>
+        </select></p>
 
     </div>
-
 
     <div class="Size_range">
         <p> How big do you wanna go?</p>
@@ -57,8 +56,8 @@
     </div>
 
     <div class="slidecontainer">
-        <input type="range" min="100000" max="500000000" class="slider" id="myMoney">
-        <p>Kroner: <span id="money"></span>kr</p>
+        <input type="range" min="100000" max="5000000" class="slider" id="myMoney">
+        <p>Krónur: <span id="money"></span>kr</p>
     </div>
 
         <script>
@@ -70,7 +69,6 @@
               output.innerHTML = this.value;
             }
         </script>
-
 
 </div>
 

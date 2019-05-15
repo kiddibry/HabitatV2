@@ -22,23 +22,16 @@
                 <li class="list-group-item text-right"><span class="pull-left"><strong>User name: </strong></span>{{ seller.username }}</li>
 
             </ul>
-
-            <ul class="list-group">
-                <li class="list-group-item text-muted">Selling Points <i class="fa fa-dashboard fa-1x"></i></li>
-                <li class="list-group-item text-right"><span class="pull-left"><strong>Houses for sale</strong></span> 125</li>
-                <li class="list-group-item text-right"><span class="pull-left"><strong>Houses Sold</strong></span> 13</li>
-                <li class="list-group-item text-right"><span class="pull-left"><strong>Succ given</strong></span> 37</li>
-            </ul>
         </div>
 
         <h3>Houses on offer</h3>
         <hr>
         
-        {% for house in houses %}
-        <div id="usr_house">
-            {% include 'house/single_house.html' with house=house %}
+        <div class="houses">
+            {% for house in houses %}
+                    {% include 'house/single_house.html' with house=house %}
+            {% endfor %}
         </div>
-        {% endfor %}
         place houses the user has on offer here
     </div>
 </div>
