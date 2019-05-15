@@ -31,36 +31,6 @@ section {
     font-size: 40px;
 }
 
-.searchBar {
-    /*text-align: center;*/
-}
-
-.search {
-
-}
-
-#search-box {
-    width: 95%;
-    height: 2.5em;
-    border: 2px solid black;
-    border-radius: 20px;
-    text-align: center;
-    font-size: 1.2em;
-    margin-top: 2px;
-
-
-}
-
-.btn {
-
-    width: 100%;
-    height: 2.5em;
-    border-radius: 5px;
-    padding-top: 8px;
-    padding-bottom: 1.5em;
-    margin-right: 20px;
-}
-
 /*------ Order by ------- */
 
 

@@ -8,16 +8,16 @@
 <script src="{% static 'js/houses.js' %}"></script>
 
 <div class="title">
-    <p>Houses</p>
+    <a href="{% url 'house-index' %}" style="color: black"><p>Houses</p></a>
 </div>
 
 <div class="searchBar">
-    <div class="input-group">
-        <input type="search" class="form-control" id="search-box" placeholder="Enter your search here.. " />
-        <div class="input-group-btn">
-            <button type="button" id="search-btn" class="btn btn-default"> Search</button>
+        <div class="input-group">
+            <input type="search" style="background-color: aliceblue; text-align: center" class="form-control" id="search-box" placeholder="Search for your next home " />
+            <div class="input-group-btn">
+                <button type="button" style="background-color: orange" id="search-btn" class="btn btn-default"> Search</button>
+            </div>
         </div>
-    </div>
 </div>
 
 <div class="Choose">
@@ -38,7 +38,7 @@
 
 
     <div class="slidecontainer">
-        <input type="range" min="10" max="1000" class="slider" id="myRange">
+        <input type="range" min="10" max="1000" value="500" class="slider" id="myRange">
         <p>Size: <span id="demo"></span>M<sup>2</sup></p>
     </div>
 
@@ -57,7 +57,7 @@
     </div>
 
     <div class="slidecontainer">
-        <input type="range" min="100000" max="500000000" class="slider" id="myMoney">
+        <input type="range" min="100000" max="400000000" value="200000000" class="slider" id="myMoney">
         <p>Kroner: <span id="money"></span>kr</p>
     </div>
 

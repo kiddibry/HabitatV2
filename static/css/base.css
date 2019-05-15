@@ -126,7 +126,7 @@ footer
 
 .col-xs-6
 {
-    border: 4px solid white;
+    border: 1px solid white;
     left: 18.5em;
 }
 
@@ -171,12 +171,11 @@ footer
 
 .navbar-brand
 {
-    border: 4px solid black;
-    top: 20%;
+    top: 22%;
     /*position:absolute;*/
     /*top: 20%;
     left:45%;*/
-    font-size: 3em;
+    font-size: 3.5em;
 
 }
 
