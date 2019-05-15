@@ -15,7 +15,8 @@ def index(request):
             'firstImage': x.houseimage_set.first().image
         } for x in House.objects.filter(name__icontains=search_filter)]
         return JsonResponse({'data': houses})
-    context = {'houses': House.objects.all().order_by('name')}
+
+    context = {'houses': House.objects.all().order_by('name')}  # default er oder by name
     return render(request, 'house/index.html', context)
 
 

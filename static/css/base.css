@@ -108,7 +108,7 @@ footer
     padding-bottom:0
   }
 
-  .site-footer .copyright-text,.site-footer .social-icons
+  .site-footer .copyright-text .social-icons
   {
     text-align:center
   }
@@ -127,7 +127,11 @@ footer
 .col-xs-6
 {
     border: 1px solid white;
+<<<<<<< HEAD
     left: 18.5em;
+=======
+    float: right;
+>>>>>>> acae1c64d8a102d5c06dc2b63d0a5440dc529da6
 }
 
 .container-fluid
@@ -171,21 +175,25 @@ footer
 
 .navbar-brand
 {
+<<<<<<< HEAD
     top: 22%;
     /*position:absolute;*/
     /*top: 20%;
     left:45%;*/
     font-size: 3.5em;
 
+=======
+    top: 20%;
+    font-size: 3em;
+>>>>>>> acae1c64d8a102d5c06dc2b63d0a5440dc529da6
 }
 
 .navbar-header-logo {
     float: left;
     margin-top: 1em;
-    /*padding-top: 1.5em;*/
 }
 
 .column{
-    padding-left: 6em;
+    padding-left: 5em;
     padding-top: 1.5em;
 }

@@ -6,6 +6,7 @@
 <link rel="stylesheet" type="text/css" href="{%static 'css/house_detail.css'%}">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
 <script src="{% static 'js/houses.js' %}"></script>
+<script src="{% static 'js/order.js' %}"></script>
 
 <div class="title">
     <a href="{% url 'house-index' %}" style="color: black"><p>Houses</p></a>
@@ -22,15 +23,18 @@
 
 <div class="Choose">
     <div class="Order_by">
-        <p>Order by: <select>
-                          <option value="Price lowest to highest">Price lowest to highest</option>
-                          <option value="Price highest to lowest">Price highest to lowest</option>
-                          <option value="Size lowest to highest">Size lowest to highest</option>
-                          <option value="Size highest to lowest">Size highest to lowest</option>
+
+        <p>Order by: <select onchange="change_order()">
+                            <option value="name">Name lowest to highest</option>
+                            <option value="-name">Name highest to lowest</option>
+                            <option value="price">Price lowest to highest</option>
+                            <option value="-price">Price highest to lowest</option>
+                            <option value="size">Size lowest to highest</option>
+                            <option value="-size">Size highest to lowest</option>
                     </select></p>
 
-    </div>
 
+    </div>
 
     <div class="Size_range">
         <p> How big do you wanna go?</p>
@@ -57,8 +61,10 @@
     </div>
 
     <div class="slidecontainer">
+
         <input type="range" min="100000" max="400000000" value="200000000" class="slider" id="myMoney">
         <p>Kroner: <span id="money"></span>kr</p>
+
     </div>
 
         <script>
@@ -70,7 +76,6 @@
               output.innerHTML = this.value;
             }
         </script>
-
 
 </div>
 
