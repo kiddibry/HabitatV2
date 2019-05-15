@@ -108,7 +108,7 @@ footer
     padding-bottom:0
   }
 
-  .site-footer .copyright-text,.site-footer .social-icons
+  .site-footer .copyright-text .social-icons
   {
     text-align:center
   }
@@ -171,22 +171,16 @@ footer
 
 .navbar-brand
 {
-    border: 4px solid black;
     top: 20%;
-    /*position:absolute;*/
-    /*top: 20%;
-    left:45%;*/
     font-size: 3em;
-
 }
 
 .navbar-header-logo {
     float: left;
     margin-top: 1em;
-    /*padding-top: 1.5em;*/
 }
 
 .column{
-    padding-left: 6em;
+    padding-left: 5em;
     padding-top: 1.5em;
 }
