@@ -2,6 +2,7 @@ from django.contrib.auth.forms import UserCreationForm
 from django.shortcuts import render, get_object_or_404, redirect
 from user.forms.user_form import UserCreateForm
 from user.models import User, Profile
+from house.models import House
 from user.forms.profile_form import ProfileForm
 
 
@@ -21,7 +22,8 @@ def get_seller_by_id(request, id):
             return redirect('home-index')
     return render(request, 'user/user_details.html', {
         'seller': get_object_or_404(User, pk=id),
-        'form': ProfileForm(instance=profile)
+        'form': ProfileForm(instance=profile),
+        'houses': House.objects.filter(seller=id)
     })
 
 
@@ -50,4 +52,9 @@ def profile(request):
         'form': ProfileForm(instance=profile)
     })
 
+
+def delete_profile(request, id):
+    user = get_object_or_404(User, pk=id)
+    user.delete()
+    return redirect('users-index')
 

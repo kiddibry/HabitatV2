@@ -9,7 +9,7 @@
 
     <div class="container">
         <div class="tab">
-        <button class="tablinks" onclick="openTab(event, 'viewProfile')" id="defaultOpen">Seller Profile</button>
+        <button class="tablinks" onclick="openTab(event, 'viewProfile')" id="defaultOpen">View Profile</button>
         <button class="tablinks" onclick="openTab(event, 'editProfile')">Edit profile</button>
     </div>
 {% else %}
@@ -48,13 +48,11 @@
         <hr>
         <h3>Houses on offer</h3>
 
-
         {% for house in houses %}
         <div id="usr_house">
-            {% include 'house/single_house.html' with house=house %}
+            {% include 'house/usr_single_house.html' with house=house %}
         </div>
         {% endfor %}
-        place houses the user has on offer here
     </div>
 </div>
 
@@ -65,7 +63,6 @@
         {{ form }}<br>
         <input type="submit" class="btn btn-primary" value="Update" />
     </form>
-    <hr>
 </div>
 </div>
 <script>
