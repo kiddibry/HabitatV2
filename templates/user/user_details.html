@@ -6,9 +6,10 @@
 <script src="{% static 'js/profile_tabs.js'%}"></script>
 
 {% if user.profile == seller.profile %}
+
     <div class="container">
         <div class="tab">
-        <button class="tablinks" onclick="openTab(event, 'viewProfile')" id="defaultOpen">Profile details</button>
+        <button class="tablinks" onclick="openTab(event, 'viewProfile')" id="defaultOpen">Seller Profile</button>
         <button class="tablinks" onclick="openTab(event, 'editProfile')">Edit profile</button>
     </div>
 {% else %}
@@ -17,11 +18,11 @@
         <button class="tablinks" onclick="openTab(event, 'viewProfile')" id="defaultOpen" hidden>Profile details</button>
     </div>
 {% endif %}
-<!-- Tab content -->
+
 <div id="viewProfile" class="tabcontent">
   <div class="row">
         <div class="col-sm-10">
-            <h1>{{seller.profile.name}}</h1></div>
+            <h3>"{{seller.profile.info}}"</h3></div>
         <div class="col-sm-2">
             <a href="/users" class="pull-right"><img title="profile image" class="img-circle img-responsive" src="{{seller.profile.profile_image}}" alt="profile_image"></a>
         </div>
@@ -34,17 +35,25 @@
                 <li class="list-group-item text-muted">Info</li>
                 <li class="list-group-item text-right"><span class="pull-left"><strong>Joined: </strong></span>{{ seller.date_joined }}</li>
                 <li class="list-group-item text-right"><span class="pull-left"><strong>User name: </strong></span>{{ seller.username }}</li>
-
             </ul>
+
+            <ul class="list-group">
+                    <li class="list-group-item text-muted">Contact Information</li>
+                    <li class="list-group-item text-right"><span class="pull-left"><strong>Real Name: </strong></span>{{seller.profile.name}}</li>
+                    <li class="list-group-item text-right"><span class="pull-left"><strong>Email: </strong></span>{{ seller.profile.mail }}</li>
+                </ul>
         </div>
 
-        <h3>Houses on offer</h3>
+        
         <hr>
+        <h3>Houses on offer</h3>
+
 
         {% for house in houses %}
         <div id="usr_house">
             {% include 'house/single_house.html' with house=house %}
         </div>
+        {% endfor %}
         place houses the user has on offer here
     </div>
 </div>
