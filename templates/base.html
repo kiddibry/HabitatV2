@@ -20,9 +20,7 @@
     <div class="navbar-header">
 
         <div class="bodycon">
-            <div class="coolumn">
-              <img class="navbar-header-logo" src="{% static 'images/thelogo.png' %}" alt="logo" width="70px" height="70px">
-            </div>
+            <a href="{% url 'home-index' %}"><img class="navbar-header-logo" src="{% static 'images/thelogo.png' %}" alt="logo" width="70px" height="70px"></a>
             <div class="column">
                 <a class="navbar-brand" href="{% url 'home-index' %}" style="color:white">Habitat</a>
             </div>
