@@ -7,7 +7,7 @@ $(document).ready(function(){
                 type: 'GET',
             success: function (resp) {
                 var newHtml = resp.data.map(d => {
-                    return `
+                    return `<a href="/houses/${ d.id }">
                             <div class="single_house">
                                 <div class="name">
                                     <fieldset>
@@ -28,7 +28,7 @@ $(document).ready(function(){
                     
                                 </div>
                             </div>
-                            
+                            </a>
 
                             <style>
                                 .single_house {
