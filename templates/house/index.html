@@ -20,7 +20,7 @@
             </div>
         </div>
 </div>
-
+<!--
 <div class="Choose">
     <div class="Order_by">
 
@@ -78,6 +78,12 @@
         </script>
 
 </div>
+-->
+<form>
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Filter">
+</form>
 
 <div class="houses">
     {% for house in houses %}
