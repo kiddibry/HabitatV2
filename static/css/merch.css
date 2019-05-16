@@ -1,9 +1,9 @@
 
-h3{
+h3 {
     color:white;
 }
 
-p{
+p {
     color: white;
 }
 
@@ -14,19 +14,8 @@ p{
     margin-left:auto;
     margin-right:auto;
 }
-/*
-.container {
-    display: flex;
-    justify-content: space-between;
-    color:#000000;
-    background-color:#D3D4C4;
-    width: 85%;
-    max-width:1200px;
-    margin:auto;
-}
-*/
 
-.foodBox {
+.merch_box {
     width: 30%;
     margin-bottom: 20px;
     text-align: center;
@@ -37,7 +26,7 @@ p{
     border: 2px solid #000000;
 }
 
-.aboutUsBox{
+.aboutUsBox {
     width: 80%;
     margin-bottom: 20px;
     text-align: center;
@@ -49,7 +38,7 @@ p{
 }
 
 @media only screen and (max-width: 1200px) {
-    .foodBox {
+    .merch_box {
         width:46%;
         display: inline-block;
         margin-bottom:20px;
@@ -58,7 +47,7 @@ p{
 }
 
 @media only screen and (max-width: 850px) {
-    .foodBox {
+    .merch_box {
         width:95%;
         display: inline-block;
         margin-bottom:20px;
