@@ -5,11 +5,18 @@ from django.shortcuts import render, get_object_or_404, redirect
 from house.forms.house_form import HouseCreateForm, HouseUpdateForm, HouseAddImagesForm
 from house.forms.filter_form import HouseFilterForm
 from house.models import House, HouseImage
+from user.models import SearchTerm
+from user.forms.profile_form import SearchTermForm
 
 
 def index(request):
     if 'search_filter' in request.GET:
         search_filter = request.GET['search_filter']
+        searchForm = SearchTermForm()
+        term = searchForm.save(commit=False)
+        term.user = request.user
+        term.term = search_filter
+        term.save()
         houses = [{
             'id': x.id,
             'name': x.name,
@@ -17,7 +24,10 @@ def index(request):
             'firstImage': x.houseimage_set.first().image,
             'postal_code': x.postal_code,
             'size': x.size,
-            'price': x.price
+            'price': x.price,
+            'category': {
+                'name': x.category.name
+            }
         } for x in House.objects.annotate(search=SearchVector('name', 'postal_code', 'description', 'category')).filter(search__icontains=search_filter)]
         return JsonResponse({'data': houses})
     context = {'houses': House.objects.all().order_by('name')}
@@ -97,7 +107,7 @@ def buy_house(request, id):
     return render(request, 'house/buy_house.html')
 
 
-@login_required()
+@login_required
 def bought(request, id):
     instance = get_object_or_404(House, pk=id)
     instance.delete()
@@ -106,6 +116,7 @@ def bought(request, id):
     })
 
 
+@login_required
 def add_images(request, id):
     if request.user.profile != get_object_or_404(House, pk=id).seller:
         return redirect('house_details', id=id)

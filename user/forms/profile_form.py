@@ -1,5 +1,5 @@
 from django.forms import ModelForm, widgets
-from user.models import Profile
+from user.models import Profile, SearchTerm
 
 
 class ProfileForm(ModelForm):
@@ -12,3 +12,9 @@ class ProfileForm(ModelForm):
             'info':  widgets.TextInput(attrs={'class': 'form-control'}),
             'profile_image': widgets.TextInput(attrs={'class': 'form-control'}),
         }
+
+
+class SearchTermForm(ModelForm):
+    class Meta:
+        model = SearchTerm
+        exclude = ['id', 'user', 'term']

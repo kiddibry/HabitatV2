@@ -1,12 +1,10 @@
-footer
-{
+footer {
   position: relative;
   bottom: 0;
   width: 100%;
 }
 
-.site-footer
-{
+.site-footer {
   background-color: #0000b3;
   padding:20px 0 3px;
   font-size:15px;
@@ -14,19 +12,16 @@ footer
   color:white;
 }
 
-.site-footer hr
-{
+.site-footer hr {
   border-top-color:#bbb;
   opacity:0.5
 }
 
-.site-footer hr.small
-{
+.site-footer hr.small {
   margin:20px 0
 }
 
-.site-footer h6
-{
+.site-footer h6 {
   color:#fff;
   font-size:16px;
   text-transform:uppercase;
@@ -34,51 +29,42 @@ footer
   letter-spacing:2px
 }
 
-.site-footer a
-{
+.site-footer a {
   color:white;
 }
 
-.site-footer a:hover
-{
+.site-footer a:hover {
   color:#3366cc;
   text-decoration:none;
 }
 
-.footer-links
-{
+.footer-links {
   padding-left:0;
   list-style:none
 }
 
-.footer-links li
-{
+.footer-links li {
   display:block
 }
 
-.footer-links a
-{
+.footer-links a {
   color:white;
 }
 
-.footer-links a:active,.footer-links a:focus,.footer-links a:hover
-{
+.footer-links a:active,.footer-links a:focus,.footer-links a:hover {
   color:white;
   text-decoration:none;
 }
 
-.footer-links.inline li
-{
+.footer-links.inline li {
   display:inline-block
 }
 
-.site-footer .social-icons
-{
+.site-footer .social-icons {
   text-align:right
 }
 
-.site-footer .social-icons a
-{
+.site-footer .social-icons a {
   width:40px;
   height:40px;
   line-height:40px;
@@ -88,51 +74,40 @@ footer
   background-color:#33353d
 }
 
-.copyright-text
-{
+.copyright-text {
   margin:0
 }
 
-@media (max-width:991px)
-{
-  .site-footer [class^=col-]
-  {
+@media (max-width:991px) {
+  .site-footer [class^=col-] {
     margin-bottom:30px
   }
 }
 
-@media (max-width:767px)
-{
-  .site-footer
-  {
+@media (max-width:767px) {
+  .site-footer {
     padding-bottom:0
   }
 
-  .site-footer .copyright-text .social-icons
-  {
+  .site-footer .copyright-text .social-icons {
     text-align:center
   }
 }
 
-@media (max-width:767px)
-{
-  .social-icons li.title
-  {
+@media (max-width:767px) {
+  .social-icons li.title {
     display:block;
     margin-right:0;
     font-weight:600
   }
 }
 
-.col-xs-6
-{
+.col-xs-6 {
     border: 1px solid white;
     float: right;
-
 }
 
-.container-fluid
-{
+.container-fluid {
     height: 8em;
     display: flex;
     justify-content: space-between;
@@ -169,12 +144,9 @@ footer
     background-color: #0000b3;
 }
 
-
-.navbar-brand
-{
+.navbar-brand {
     top: 22%;
     font-size: 3.5em;
-
 }
 
 .navbar-header-logo {
@@ -182,7 +154,7 @@ footer
     margin-top: 1em;
 }
 
-.column{
+.column {
     padding-left: 5em;
     padding-top: 1.5em;
 }
