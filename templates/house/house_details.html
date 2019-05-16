@@ -23,7 +23,7 @@
     {% if user.is_authenticated %}
 
         {% if user.profile != house.seller %}
-            <a href="{% url 'buy' house.id%}" class="block btn btn-primary">Send an offer on this house</a>
+            <a href="{% url 'buy' house.id%}" class="block btn btn-primary">Buy house</a>
         {% endif%}
 
         {% if user.profile == house.seller %}
