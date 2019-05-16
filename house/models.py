@@ -11,11 +11,11 @@ class HouseCategory(models.Model):
 
 class House(models.Model):
     name = models.CharField(max_length=255)
-    price = models.CharField(max_length=20)
+    price = models.PositiveIntegerField()
     description = models.CharField(max_length=999, blank=True)
-    size = models.CharField(max_length=255)
+    size = models.PositiveIntegerField()
     category = models.ForeignKey(HouseCategory, on_delete=models.CASCADE)
-    postal_code = models.IntegerField(max_length=255)
+    postal_code = models.PositiveIntegerField()
     on_sale = models.BooleanField(default=True)
     seller = models.ForeignKey(Profile, on_delete=models.CASCADE)
 
@@ -35,7 +35,7 @@ class HouseFilter(models.Model):
         ('-size', 'Size highest to lowest')
     )
     order = models.CharField(max_length=30, choices=ORDER_CHOICES, default='name')
-    price_low = models.CharField(max_length=30, blank=True)
-    price_high = models.CharField(max_length=30, blank=True)
-    size_low = models.CharField(max_length=30, blank=True)
-    size_high = models.CharField(max_length=30, blank=True)
+    price_low = models.IntegerField(blank=True)
+    price_high = models.IntegerField(blank=True)
+    size_low = models.IntegerField(blank=True)
+    size_high = models.IntegerField(blank=True)

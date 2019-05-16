@@ -1,4 +1,5 @@
 from django.contrib.auth.decorators import login_required, user_passes_test
+from django.contrib.postgres.search import SearchVector
 from django.http import JsonResponse
 from django.shortcuts import render, get_object_or_404, redirect
 from house.forms.house_form import HouseCreateForm, HouseUpdateForm, HouseAddImagesForm
@@ -13,8 +14,11 @@ def index(request):
             'id': x.id,
             'name': x.name,
             'description': x.description,
-            'firstImage': x.houseimage_set.first().image
-        } for x in House.objects.filter(name__icontains=search_filter)]
+            'firstImage': x.houseimage_set.first().image,
+            'postal_code': x.postal_code,
+            'size': x.size,
+            'price': x.price
+        } for x in House.objects.annotate(search=SearchVector('name', 'postal_code', 'description', 'category')).filter(search__icontains=search_filter)]
         return JsonResponse({'data': houses})
     context = {'houses': House.objects.all().order_by('name')}
     houses = House.objects.all()
