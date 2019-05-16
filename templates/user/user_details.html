@@ -4,6 +4,7 @@
 
 <link rel="stylesheet" href="{% static 'css/user_detail.css' %}">
 <script src="{% static 'js/profile_tabs.js'%}"></script>
+<script src="{% static 'js/houses.js'%}"></script>
 
 {% if user.profile == seller.profile %}
 
@@ -11,6 +12,7 @@
         <div class="tab">
         <button class="tablinks" onclick="openTab(event, 'viewProfile')" id="defaultOpen">View Profile</button>
         <button class="tablinks" onclick="openTab(event, 'editProfile')">Edit profile</button>
+        <button class="tablinks" onclick="openTab(event, 'searchHistory')">Search History</button>
     </div>
 {% else %}
     <div class="container">
@@ -38,10 +40,15 @@
             </ul>
 
             <ul class="list-group">
-                    <li class="list-group-item text-muted">Contact Information</li>
-                    <li class="list-group-item text-right"><span class="pull-left"><strong>Real Name: </strong></span>{{seller.profile.name}}</li>
-                    <li class="list-group-item text-right"><span class="pull-left"><strong>Email: </strong></span>{{ seller.profile.mail }}</li>
+                <li class="list-group-item text-muted">Contact Information</li>
+                <li class="list-group-item text-right"><span class="pull-left"><strong>Real Name: </strong></span>{{seller.profile.name}}</li>
+                <li class="list-group-item text-right"><span class="pull-left"><strong>Email: </strong></span>{{ seller.profile.mail }}</li>
+            </ul>
+            <a href="delete/{{seller.id}}">
+                <ul class="list-group">
+                    <li class="list-group-item text-muted" style="background-color: red; text-align: center; color:black;">Delete Account</li>
                 </ul>
+            </a>
         </div>
 
         <h3>Houses on offer</h3>
@@ -63,6 +70,17 @@
         <input type="submit" class="btn btn-primary" value="Update" />
     </form>
 </div>
+
+    <div id="searchHistory" class="tabcontent">
+    <h1>Your search history</h1>
+        {% for term in search_history %}
+            <!--<a href="/houses?search_filter={{term}}">-->
+                <h3>{{term}}</h3>
+                <!--<button type="button" style="background-color: orange" id="search-btn" class="btn btn-default"> Search</button>-->
+                <br>
+            <!--</a>-->
+        {% endfor %}
+    </div>
 </div>
 <script>
     document.getElementById("defaultOpen").click();
