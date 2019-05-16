@@ -28,8 +28,10 @@
 
 
     </a>
+    {% if seller.profile == user.profile %}
     <div class="edit_buttons">
                 <a href="{% url 'delete_house' house.id%}" class="block btn btn-primary">Delete</a>
                 <a href="{% url 'update_house' house.id%}" class="block btn btn-primary">Update</a>
             </div>
+    {% endif %}
 </div>
