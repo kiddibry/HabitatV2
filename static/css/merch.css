@@ -15,7 +15,7 @@ p {
     margin-right:auto;
 }
 
-.foodBox {
+.merch_box {
     width: 30%;
     margin-bottom: 20px;
     text-align: center;
@@ -38,7 +38,7 @@ p {
 }
 
 @media only screen and (max-width: 1200px) {
-    .foodBox {
+    .merch_box {
         width:46%;
         display: inline-block;
         margin-bottom:20px;
@@ -47,7 +47,7 @@ p {
 }
 
 @media only screen and (max-width: 850px) {
-    .foodBox {
+    .merch_box {
         width:95%;
         display: inline-block;
         margin-bottom:20px;

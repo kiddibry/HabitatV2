@@ -1,9 +1,9 @@
 
-h3{
+h3 {
     color:white;
 }
 
-p{
+p {
     color: white;
 }
 
@@ -19,7 +19,7 @@ p{
     padding:5px;
 }
 
-.imageBox{
+.imageBox {
     background-color: #0000b3;
     border-radius: 10px;
     border: 2px solid #000000;
@@ -29,7 +29,7 @@ p{
     width: 100%;
 }
 
-.aboutUsBox{
+.aboutUsBox {
     width: 100%;
     margin-bottom: 20px;
     text-align: center;
