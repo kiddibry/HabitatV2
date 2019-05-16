@@ -1,76 +1,62 @@
-     .searchBar
-    {
+.searchBar {
+    text-align: center;
+}
 
-        text-align: center;
+.searchTerm {
+    width: 80%;
+    height: 2.5em;
+    border: 2px solid black;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 1.2em;
+    margin-top: 2px;
+}
 
-    }
+.searchButton {
+    height: 2.5em;
+    border-radius: 5px;
+    padding-top: 8px;
+}
 
-    .search
-    {
-
-    }
-
-    .searchTerm{
-        width: 80%;
-        height: 2.5em;
-        border: 2px solid black;
-        border-radius: 20px;
-        text-align: center;
-        font-size: 1.2em;
-        margin-top: 2px;
-    }
-
-    .searchButton{
-
-        height: 2.5em;
-        border-radius: 5px;
-        padding-top: 8px;
-
-    }
-
-.chooseBox
-{
+.chooseBox {
     float: left;
     margin-top: 1em;
     margin-bottom: 1.5em;
     width: 100%;
 }
 
-.allBox
-{
+.allBox {
     display: flex;
     height: 100%;
     float: left;
-    margin-left: 18%;
-    margin-right: 18%;
+    margin-left: 17%;
+    margin-right: 17%;
 }
 
-.findBox
-{
+.findBox {
     border: 3px solid black;
     border-radius: 5px;
-    padding: 10px;
     margin-right: 5em;
     background-color: #0000b3;
 }
 
-.sellBox
-{
+.fill {
+    padding: 10px;
+    height: 100%;
+}
+
+.sellBox {
     border: 3px solid black;
     border-radius: 5px;
-    padding: 10px;
     margin-right: 5em;
     background-color: #0000b3;
 }
 
-.merchBox
-{
+.merchBox {
     border: 3px solid black;
     border-radius: 5px;
-    padding: 10px;
     background-color: #0000b3;
 }
-
 
 .homes
 {
@@ -80,21 +66,6 @@
     overflow: auto;
     height: 10em;
     width: 100%;
-}
-
-.info
-{
-
-}
-
-.photo
-{
-
-}
-
-.prize
-{
-
 }
 
 #ran_hom:hover {
