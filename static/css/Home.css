@@ -41,34 +41,37 @@
     display: flex;
     height: 100%;
     float: left;
-    margin-left: 18%;
-    margin-right: 18%;
+    margin-left: 17%;
+    margin-right: 17%;
 }
 
 .findBox
 {
     border: 3px solid black;
     border-radius: 5px;
-    padding: 10px;
     margin-right: 5em;
     background-color: #0000b3;
+}
+
+.fill {
+    padding: 10px;
 }
 
 .sellBox
 {
     border: 3px solid black;
     border-radius: 5px;
-    padding: 10px;
     margin-right: 5em;
     background-color: #0000b3;
+    height: 100%;
 }
 
 .merchBox
 {
     border: 3px solid black;
     border-radius: 5px;
-    padding: 10px;
     background-color: #0000b3;
+    height: 100%;
 }
 
 
