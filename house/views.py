@@ -25,6 +25,9 @@ def index(request):
             'postal_code': x.postal_code,
             'size': x.size,
             'price': x.price,
+            'category': {
+                'name': x.category.name
+            }
         } for x in House.objects.annotate(search=SearchVector('name', 'postal_code', 'description', 'category')).filter(search__icontains=search_filter)]
         return JsonResponse({'data': houses})
     context = {'houses': House.objects.all().order_by('name')}
