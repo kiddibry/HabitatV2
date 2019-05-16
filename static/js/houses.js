@@ -11,7 +11,10 @@ $(document).ready(function(){
                             <div class="single_house">
                                 <div class="name">
                                     <fieldset>
-                                        <legend>${ d.name }</legend>
+                                        <legend>   
+                                             ${ d.name }
+                                            <p style="font-size: 0.8em"> Postal code: ${ d.postal_code }</p>
+                                        </legend>
                                         <div class="description">
                                             <p> ${ d.description } </p>
                                         </div>

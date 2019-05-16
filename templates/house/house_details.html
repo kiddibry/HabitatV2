@@ -6,6 +6,7 @@
     <link rel="stylesheet" type="text/css" href="{%static 'css/house_detail.css'%}">
 
 <h2 style="text-align: center">{{ house.name }}</h2>
+<p style=" text-align: center"> Postal code: {{ house.postal_code }}</p>
 <section>
     <div class="images">
 {% for house_image in house.houseimage_set.all %}
@@ -22,7 +23,7 @@
     {% if user.is_authenticated %}
 
         {% if user.profile != house.seller %}
-            <a href="{% url 'buy' house.id%}" class="block btn btn-primary">Send an offer on this house</a>
+            <a href="{% url 'buy' house.id%}" class="block btn btn-primary">Buy house</a>
         {% endif%}
 
         {% if user.profile == house.seller %}
