@@ -2,54 +2,76 @@
 .Big_box {
     border: 1px solid black;
     width: 100%;
-    height: 220px;
+    height: 350px;
 }
 
 .Img_box {
     border: 1px solid red;
     float: left;
-    width: 49%;
+    width: 50%;
     height: 100%;
 }
 
 .merch_photo {
 
     border: 1px solid brown;
-    width: auto;
+    width: 100%;
+    height: 100%;
 }
 
 .Data_box {
     border: 1px solid blue;
-    height: 100%;
+    height: 90%;
     float: right;
     width: 49%;
+    font-size: 20px;
+    overflow: auto;
+    margin-top: 10px;
+
 }
 
 
 .name_box {
-    border: 10px orange;
-    height: 40px;
+    margin-top: 0.5em;
+
 }
 
 .price_box {
-    border: 10px orange;
-    height: 40px;
+    border: 1px orange;
+    margin-top: 1em;
+
 }
 
 .info_box {
-    border: 10px orange;
-    height: 40px;
+    border: 1px orange;
+    margin-top: 1em;
 }
 
 
 
 .Check_box {
-    border: 1px solid orange;
+    margin-top: 0.5em;
     height: 100%;
+    text-align: center;
+    font-size: 22px;
+    font-style: oblique;
 }
+
 
 .Buy_box {
-    border: 1px solid purple;
+
     height: 40px;
+    margin-top: 1em;
+    margin-bottom: 1em;
 }
 
+.BUY {
+    margin-left: 48%;
+    margin-top: 0.5em;
+}
+
+.takki {
+    border: 1px solid black;
+    width: 5em;
+    height: 2em;
+}

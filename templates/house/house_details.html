@@ -6,6 +6,7 @@
     <link rel="stylesheet" type="text/css" href="{%static 'css/house_detail.css'%}">
 
 <h2 style="text-align: center">{{ house.name }}</h2>
+<p style=" text-align: center"> Postal code: {{ house.postal_code }}</p>
 <section>
     <div class="images">
 {% for house_image in house.houseimage_set.all %}
