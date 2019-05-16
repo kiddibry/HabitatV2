@@ -8,7 +8,7 @@ class HouseFilterForm(ModelForm):
         model = HouseFilter
         exclude = []
         widgets = {
-            'order': widgets.Select(attrs={'class': 'form-control'}),
+            'order': widgets.Select(attrs={'class': 'order'}),
             'size_low': widgets.NumberInput(attrs={'class': 'form-control'}),
             'size_high': widgets.NumberInput(attrs={'class': 'form-control'}),
             'price_low': widgets.NumberInput(attrs={'class': 'form-control'}),
