@@ -80,9 +80,11 @@
 </div>
 -->
 <form>
-    {% csrf_token %}
-    {{ form }}
-    <input type="submit" value="Filter">
+    <div class="filter">
+        {% csrf_token %}
+        {{ form }}
+    </div>
+    <input type="submit" value="Sort" style="margin-bottom: 1em; margin-top: 1em; margin-left: 45%; width: 8em; background-color: orange " >
 </form>
 
 <div class="houses">

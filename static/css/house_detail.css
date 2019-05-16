@@ -34,9 +34,9 @@ section {
 
 /*------ Order by ------- */
 
-
+/*
 .Choose {
-    /*border: 4px solid black;*/
+    border: 4px solid black;
     margin-top: 2em;
     font-size: 1.5em;
 
@@ -91,6 +91,41 @@ section {
   background: orange;
   cursor: pointer;
 }
+*/
+
+.filter {
+    /*border: 1px solid red;*/
+    margin-top: 1em;
+    text-align: center;
+}
+
+.order {
+    margin-left: 0.2em;
+    background-color: aliceblue;
+}
+
+.size_low {
+    margin-left: 0.2em;
+     background-color: aliceblue;
+
+}
+
+.size_high {
+    margin-left: 0.2em;
+     background-color: aliceblue;
+}
+
+.prize_low {
+    /*border: 2px solid blue;*/
+    margin-left: 0.2em;
+     background-color: aliceblue;
+}
+
+.prize_high {
+    margin-left: 0.2em;
+     background-color: aliceblue;
+}
+
 
 
 /*------Houses-------*/

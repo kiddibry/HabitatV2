@@ -34,7 +34,7 @@ class HouseFilter(models.Model):
         ('size', 'Size lowest to highest'),
         ('-size', 'Size highest to lowest')
     )
-    order = models.CharField(max_length=30, choices=ORDER_CHOICES, default='name')
+    order = models.CharField(max_length=30, choices=ORDER_CHOICES, default='name', blank=True)
     price_low = models.IntegerField(blank=True)
     price_high = models.IntegerField(blank=True)
     size_low = models.IntegerField(blank=True)
