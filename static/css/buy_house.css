@@ -40,3 +40,7 @@ body {
     line-height: 1.428571429;
     border-radius: 15px;
 }
+
+#step-1, #step-2, #step-3, #step-4 {
+    margin-right: 30%;
+}

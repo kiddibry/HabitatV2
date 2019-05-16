@@ -9,6 +9,7 @@
 
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
     <link rel="stylesheet" href="{% static 'css/buy_house.css' %}">
+    <script type="text/javascript" src="{% static 'js/buy_house_ver.js' %}"></script>
 <div class="container">
 
 <div class="stepwizard col-md-offset-3">
@@ -34,24 +35,24 @@
   <form role="form" action="" method="post">
     {% csrf_token %}
     <div class="row setup-content" id="step-1">
-      <div class="col-xs-6">
+      <div class="col-xs-6" id="infobox">
         <div class="col-md-12">
           <h3>Your Contact information</h3>
           <div class="form-group">
-            <label class="control-label">Street name</label>
-            <input id="street_name" required maxlength="100" type="text" class="form-control" placeholder="Enter street name"  />
+            <label class="control-label" >Street name</label>
+            <input id="sn_F" required maxlength="100" type="text" class="form-control" placeholder="Enter street name"  />
           </div>
           <div class="form-group">
             <label class="control-label">House number</label>
-            <input required maxlength="100" type="text" class="form-control" placeholder="Enter house number" />
+            <input id="hn_F" required maxlength="100" type="text" class="form-control" placeholder="Enter house number" />
           </div>
           <div class="form-group">
-            <label class="control-label">City</label>
-            <input maxlength="100" type="text" required class="form-control" placeholder="Enter your city" />
+            <label class="control-label" >City</label>
+            <input id="c_F" maxlength="100" type="text" required class="form-control" placeholder="Enter your city" />
           </div>
           <div class="form-group">
             <label class="control-label">Country</label>
-            <select required class="form-control">
+            <select id="cn_F" required class="form-control">
               <option value="iceland">Iceland</option>
               <option value="usa">United states of America</option>
               <option value="france">France</option>
@@ -60,12 +61,12 @@
             </select>
           </div>
           <div class="form-group">
-            <label class="control-label">Postal code</label>
-            <input maxlength="100" type="text" required="required" class="form-control" placeholder="Enter your postal code" />
+            <label class="control-label" >Postal code</label>
+            <input id="pc_F" maxlength="100" type="text" required="required" class="form-control" placeholder="Enter your postal code" />
           </div>
           <div class="form-group">
             <label class="control-label">Social security number</label>
-            <input maxlength="100" type="text" required="required" class="form-control" placeholder="Enter your social security number" />
+            <input id="sc_F" maxlength="100" type="text" required="required" class="form-control" placeholder="Enter your social security number" />
           </div>
           <button class="btn btn-primary nextBtn btn-lg pull-right" type="button" >Next</button>
         </div>
@@ -77,35 +78,61 @@
           <h3>Payment</h3>
           <div class="form-group">
             <label class="control-label">Credit card number</label>
-            <input maxlength="200" type="text" required="required" class="form-control" placeholder="Enter credit card number" />
+            <input id="cc_F" maxlength="16" type="text" required="required" class="form-control" placeholder="Enter credit card number" />
           </div>
           <div class="form-group col-md-5">
             <label class="control-label">Expiration date</label>
-            <input maxlength="30" type="text" required="required" class="form-control" placeholder="mm/dd"  />
+            <input id="ex_F" maxlength="4" type="text" required="required" class="form-control" placeholder="mm/dd"  />
           </div>
           <div class="form-group col-md-5">
-            <label class="control-label">Card verification value</label>
-            <input type="text" class="form-control" placeholder="CVV">
+            <label class="control-label">CVV</label>
+            <input id="cvv_F" maxlength="3" type="text" class="form-control" placeholder="CVV">
           </div>
         </div>
-        <button class="btn btn-primary nextBtn btn-lg pull-right" type="button" >Next</button>
+        <button onclick="change()" class="btn btn-primary nextBtn btn-lg pull-right" type="button" >Next</button>
       </div>
     </div>
     <div class="row setup-content" id="step-3">
       <div class="col-xs-6">
         <div class="col-md-12">
           <h3>Review</h3>
-          <p>Street name: </p>
-          <p>House number: FIX THIS SHIT</p>
-          <p>City: </p>
-          <p>Country: </p>
-          <p>Postal code: </p>
-          <p>Social security number:</p>
-          <p>Credit card number: </p>
-          <p>Expiration date: </p>
-          <p>CVV: </p>
+          
+          <label class="control-label" >Street name</label>
+          <div id="SN">-</div>
+          <hr>
+
+          <label class="control-label">House number</label>
+          <div id="HN">-</div>
+          <hr>
+
+          <label class="control-label" >City</label>
+          <div id="Ct">-</div>
+          <hr>
+
+          <label class="control-label">Country</label>
+          <div id="Cn">-</div>
+          <hr>
+
+          <label class="control-label" >Postal code</label>
+          <div id="PC">-</div>
+          <hr>
+
+          <label class="control-label">Social security number</label>
+          <div id="SC">-</div>
+          <hr>
+
+          <label class="control-label">Credit card number</label>
+          <div id="CCN">-</div>
+          <hr>
+
+          <label class="control-label">Expiration date</label>
+          <div id="EX">-</div>
+          <hr>
+
+          <label class="control-label">CVV</label>
+          <div id="CVV">-</div>
         </div>
-        <button class="btn btn-primary nextBtn btn-lg pull-right" type="button" >Next</button>
+        <button class="btn btn-primary nextBtn btn-lg pull-right" type="button" id="nex_but" >Next</button>
       </div>
     </div>
     <div class="row setup-content" id="step-4">
