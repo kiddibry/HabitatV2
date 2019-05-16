@@ -14,7 +14,7 @@ $(document).ready(function(){
                                         <legend>   
                                              ${ d.name }
                                             <p style="font-size: 0.8em"> Postal code: ${ d.postal_code }</p>
-                                            <p style="font-size: 0.8em">{{ house.category}}</p>
+                                            <p style="font-size: 0.8em">${ d.category}</p>
                                         </legend>
                                         <div class="description">
                                             <p> ${ d.description } </p>
