@@ -87,7 +87,9 @@
 
 <div class="houses">
     {% for house in houses %}
-        {% include 'house/single_house.html' with house=house %}
+        {% if house.on_sale %}
+            {% include 'house/single_house.html' with house=house %}
+        {% endif %}
     {% endfor %}
 </div>
 
