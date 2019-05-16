@@ -1,9 +1,9 @@
 
-h3{
+h3 {
     color:white;
 }
 
-p{
+p {
     color: white;
 }
 
@@ -14,17 +14,6 @@ p{
     margin-left:auto;
     margin-right:auto;
 }
-/*
-.container {
-    display: flex;
-    justify-content: space-between;
-    color:#000000;
-    background-color:#D3D4C4;
-    width: 85%;
-    max-width:1200px;
-    margin:auto;
-}
-*/
 
 .foodBox {
     width: 30%;
@@ -37,7 +26,7 @@ p{
     border: 2px solid #000000;
 }
 
-.aboutUsBox{
+.aboutUsBox {
     width: 80%;
     margin-bottom: 20px;
     text-align: center;

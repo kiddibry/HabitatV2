@@ -7,30 +7,25 @@
 
 <link rel="stylesheet" href="{% static 'css/buymerch.css' %}">
 
-    <div class="Big_box">
-        <div class="Img_box">
+    <div class="big_box">
+        <div class="img_box">
             <img class="merch_photo"  src="../../static/images/doge.png" height="1002" width="1024"/>
         </div>
 
-        <div class="Data_box">
+        <div class="data_box">
             <div class="name_box">Name: </div>
             <div class="price_box">Price: </div>
             <div class="info_box">Info: </div>
         </div>
     </div>
 
-    <div class="Check_box">
+    <div class="check_box">
         <p> Choose a size</p>
-        <div class="prufa">
-            <input type="radio" name="size" value="Small"> Small
-            <input type="radio" name="size" value="Medium" checked> Medium
-            <input type="radio" name="size" value="large"> Large
-        </div>
+        Small <input type="radio" name="size" value="Small">
+        Medium <input type="radio" name="size" value="Medium" checked>
+        Large <input type="radio" name="size" value="large">
     </div>
 
-    <div class="Buy_box">
-        <div class="BUY">
-            <button class="takki" type="button">Buy!</button>
-        </div>
-    </div>
+    <button class="button" type="button">Buy!</button>
+
 {% endblock %}
