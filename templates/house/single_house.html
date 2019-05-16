@@ -9,7 +9,9 @@
     <a href="/houses/{{ house.id }}">
             <div class="name">
                 <fieldset>
-                    <legend>{{ house.name }} <p style="font-size: 0.8em"> Postal code: {{ house.postal_code }}</p></legend>
+                    <legend>{{ house.name }} <p style="font-size: 0.8em"> Postal code: {{ house.postal_code }}</p>
+                        <p style="font-size: 0.8em">{{ house.category}}</p>
+                    </legend>
                     <div class="description">
                         <p> {{ house.description }} </p>
                     </div>
