@@ -81,16 +81,12 @@
     <div id="searchHistory" class="tabcontent">
     <h1>Your search history</h1>
     <hr>
+    <a href="{% url 'clear_search' %}" class="btn btn-primary">Clear search history</a>
     <ul>
         {% for term in search_history %}
-                <h3>{{term}}</h3>
+                <li><h3>{{term}}</h3></li>
         {% endfor %}
-        <a href="{% url 'clear_search' %}" class="btn btn-primary">Clear history</a>
-            <!--<a href="/houses?search_filter={{term}}">-->
-                    <li><h3>{{term}}</h3>
-                <!--<button type="button" style="background-color: orange" id="search-btn" class="btn btn-default"> Search</button>-->
-            <!--</a>-->
-        {% endfor %}
+
     </ul>
     </div>
 </div>
