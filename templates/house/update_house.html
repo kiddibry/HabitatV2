@@ -5,4 +5,10 @@
         {{ form }}
         <input type="submit" value="Update" class="btn btn-primary pull-right" style="clear:both; margin:10px 0">
     </form>
+    {% for image in images%}
+        <img src="{{image.image}}" alt="image" class="hs_img">
+        <a href="{% url 'delete_image' image.id %}" class="btn btn-primary">Delete image</a>
+    {% endfor %}
+    <br>
+    <a href="{% url 'add_images' id %}" class="btn btn-primary">Add image</a>
 {% endblock %}

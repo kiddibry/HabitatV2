@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+{% block content %}
+    {% for image in images%}
+        <img src="{{image}}" alt="image">
+        <button type="button">Delete</button>
+    {% endfor%}
+{% endblock %}

@@ -85,12 +85,6 @@
         {% for term in search_history %}
                 <h3>{{term}}</h3>
         {% endfor %}
-        <a href="{% url 'clear_search' %}" class="btn btn-primary">Clear history</a>
-            <!--<a href="/houses?search_filter={{term}}">-->
-                    <li><h3>{{term}}</h3>
-                <!--<button type="button" style="background-color: orange" id="search-btn" class="btn btn-default"> Search</button>-->
-            <!--</a>-->
-        {% endfor %}
     </ul>
     </div>
 </div>
