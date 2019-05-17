@@ -12,21 +12,28 @@ def index(request):
 
 
 def get_seller_by_id(request, id):
-    profile = Profile.objects.filter(user=request.user).first()
-    search_history = SearchTerm.objects.filter(user=request.user)
-    if request.method == 'POST':
-        form = ProfileForm(instance=profile, data=request.POST)
-        if form.is_valid():
-            profile = form.save(commit=False)
-            profile.user = request.user
-            profile.save()
-            return redirect('home-index')
-    return render(request, 'user/user_details.html', {
-        'seller': get_object_or_404(User, pk=id),
-        'form': ProfileForm(instance=profile),
-        'houses': House.objects.filter(seller=id),
-        'search_history': search_history
-    })
+    if request.user.is_authenticated:
+        profile = Profile.objects.filter(user=request.user).first()
+        search_history = SearchTerm.objects.filter(user=request.user)
+        if request.method == 'POST':
+            form = ProfileForm(instance=profile, data=request.POST)
+            if form.is_valid():
+                profile = form.save(commit=False)
+                profile.user = request.user
+                profile.save()
+                return redirect('home-index')
+        context = {
+            'seller': get_object_or_404(User, pk=id),
+            'form': ProfileForm(instance=profile),
+            'houses': House.objects.filter(seller=id),
+            'search_history': search_history
+        }
+    else:
+        context = {
+            'seller': get_object_or_404(User, pk=id),
+            'houses': House.objects.filter(seller=id)
+        }
+    return render(request, 'user/user_details.html', context)
 
 
 def register(request):

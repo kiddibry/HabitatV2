@@ -2,6 +2,7 @@ from django.contrib.auth.decorators import login_required, user_passes_test
 from django.contrib.postgres.search import SearchVector
 from django.http import JsonResponse
 from django.shortcuts import render, get_object_or_404, redirect
+from django.contrib import messages
 from house.forms.house_form import HouseCreateForm, HouseUpdateForm, HouseAddImagesForm
 from house.forms.filter_form import HouseFilterForm
 from house.models import House, HouseImage
@@ -12,7 +13,7 @@ from user.forms.profile_form import SearchTermForm
 def index(request):
     if 'search_filter' in request.GET:
         search_filter = request.GET['search_filter']
-        if search_filter != '':
+        if search_filter != '' and request.user.is_authenticated:
             searchForm = SearchTermForm()
             term = searchForm.save(commit=False)
             term.user = request.user
@@ -140,9 +141,12 @@ def add_images(request, id):
 @login_required
 def remove_image(request, id):
     image = get_object_or_404(HouseImage, pk=id)
-    # imageHouse = get_object_or_404(House, pk=image.house_id)
+    house = get_object_or_404(House, pk=image.house_id)
     if request.user.profile != image.house.seller:
         return redirect('house_details', id=id)
+    elif len(HouseImage.objects.filter(house_id=house.id)) <= 1:
+        messages.error(request, 'You can not delete all images from the house')
+        return redirect('house_details', id=house.id)
     else:
         image.delete()
         return redirect('update_house', id=image.house_id)

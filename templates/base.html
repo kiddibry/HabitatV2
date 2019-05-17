@@ -44,7 +44,15 @@
     </div>
   </div>
 </nav>
-
+    {% if messages %}
+    <div class="span12">
+    {% for message in messages %}
+        <div class="alert alert-{{ message.tags }}" style="color: crimson;">
+            {{ message|safe }}
+        </div>
+    {% endfor %}
+</div>
+{% endif %}
     <div class="container">
     {% block content %}
 

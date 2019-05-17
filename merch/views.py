@@ -1,6 +1,6 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from merch.models import Merch, MerchCategory
-# Create your views here.
+
 
 def index(request):
     categories = MerchCategory.objects.all().order_by('name')
@@ -40,4 +40,10 @@ def buymerch(request, id):
     return render(request, 'merch/buymerch.html', {
         'merch': merch
     })
+
+
+def checkout(request):
+    if request.method == 'POST':
+        return redirect('home-index')
+    return render(request, 'merch/checkout.html')
 

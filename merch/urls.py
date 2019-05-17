@@ -9,4 +9,5 @@ urlpatterns = [
     path('T-shirts', views.tshirts, name="merch_t-shirts"),
     path('aboutmerch', views.aboutmerch, name="merch_aboutmerch"),
     path('buymerch/<int:id>', views.buymerch, name="merch_buymerch"),
+    path('checkout', views.checkout, name="checkout")
 ]
