@@ -1,7 +1,13 @@
+
+#all_but_head_and_footer {
+    min-height: 29em;
+}
+
 footer {
-  position: relative;
+  /*position: relative;
   bottom: 0;
-  width: 100%;
+  width: 100%;*/
+    margin-top: 1em;
 }
 
 .site-footer {
