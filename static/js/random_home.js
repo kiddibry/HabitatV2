@@ -1,4 +1,4 @@
-var homes = ['castle', 'apartment', 'house', 'condo', 'palace', 'mansion', 'citadel', 'flat', 'suite', 'home']
+var homes = ['Castle', 'Apartment', 'Galaxy', 'Condo', 'Palace', 'Mansion', 'Citadel', 'Flat', 'Suite', 'Home',]
 
 function randomWholeNumber() {
     return Math.floor(Math.random() * 10);
