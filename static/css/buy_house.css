@@ -48,6 +48,12 @@ body {
     border-radius: 15px;
 }
 
+#buying {
+    margin-bottom: 2em;
+    margin-right: 50%;
+
+}
+
 #step-1, #step-2, #step-3, #step-4 {
     margin-right: 30%;
 }
