@@ -19,65 +19,7 @@
             </div>
         </div>
 </div>
-<!--
-<div class="Choose">
-    <div class="Order_by">
 
-        <p>Order by: <select onchange="change_order()">
-                            <option value="name">Name lowest to highest</option>
-                            <option value="-name">Name highest to lowest</option>
-                            <option value="price">Price lowest to highest</option>
-                            <option value="-price">Price highest to lowest</option>
-                            <option value="size">Size lowest to highest</option>
-                            <option value="-size">Size highest to lowest</option>
-                    </select></p>
-
-
-    </div>
-
-    <div class="Size_range">
-        <p> How big do you wanna go?</p>
-    </div>
-
-
-    <div class="slidecontainer">
-        <input type="range" min="10" max="1000" value="500" class="slider" id="myRange">
-        <p>Size: <span id="demo"></span>M<sup>2</sup></p>
-    </div>
-
-        <script>
-            var slider1 = document.getElementById("myRange");
-            var output1 = document.getElementById("demo");
-            output1.innerHTML = slider1.value;
-
-            slider1.oninput = function() {
-              output1.innerHTML = this.value;
-            }
-        </script>
-
-    <div class="Price_range">
-        <P>How much do you got?</P>
-    </div>
-
-    <div class="slidecontainer">
-
-        <input type="range" min="100000" max="400000000" value="200000000" class="slider" id="myMoney">
-        <p>Kroner: <span id="money"></span>kr</p>
-
-    </div>
-
-        <script>
-            var slider = document.getElementById("myMoney");
-            var output = document.getElementById("money");
-            output.innerHTML = slider.value;
-
-            slider.oninput = function() {
-              output.innerHTML = this.value;
-            }
-        </script>
-
-</div>
--->
 <form>
     <div class="filter">
         {% csrf_token %}
@@ -88,6 +30,7 @@
 
 <div class="houses">
     {% for house in houses %}
+        <hr>
         {% if house.on_sale %}
             {% include 'house/single_house.html' with house=house %}
         {% endif %}
