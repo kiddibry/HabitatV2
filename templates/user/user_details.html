@@ -44,11 +44,13 @@
                 <li class="list-group-item text-right"><span class="pull-left"><strong>Real Name: </strong></span>{{seller.profile.name}}</li>
                 <li class="list-group-item text-right"><span class="pull-left"><strong>Email: </strong></span>{{ seller.profile.mail }}</li>
             </ul>
+            {% if seller.profile == user.profile %}
             <a href="delete/{{seller.id}}">
                 <ul class="list-group">
                     <li class="list-group-item text-muted" style="background-color: red; text-align: center; color:black;">Delete Account</li>
                 </ul>
             </a>
+            {% endif %}
         </div>
 
         <h3>Houses on offer</h3>
