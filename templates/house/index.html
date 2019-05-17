@@ -19,6 +19,7 @@
             </div>
         </div>
 </div>
+
 <form>
     <div class="filter">
         {% csrf_token %}
@@ -29,6 +30,7 @@
 
 <div class="houses">
     {% for house in houses %}
+        <hr>
         {% if house.on_sale %}
             {% include 'house/single_house.html' with house=house %}
         {% endif %}

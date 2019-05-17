@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
 {% block content %}
 <h1>You just bought {{house.name}} from <a href="/users/{{ house.seller_id }}">{{house.seller}}</a></h1>
+<br>
 {% endblock %}

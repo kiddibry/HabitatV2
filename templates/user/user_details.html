@@ -14,6 +14,7 @@
         <button class="tablinks" onclick="openTab(event, 'editProfile')">Edit profile</button>
         <button class="tablinks" onclick="openTab(event, 'searchHistory')">Search History</button>
     </div>
+    
 {% else %}
     <div class="container">
         <div class="tab">
@@ -44,12 +45,14 @@
                 <li class="list-group-item text-right"><span class="pull-left"><strong>Real Name: </strong></span>{{seller.profile.name}}</li>
                 <li class="list-group-item text-right"><span class="pull-left"><strong>Email: </strong></span>{{ seller.profile.mail }}</li>
             </ul>
+
             {% if seller.profile == user.profile %}
             <a href="delete/{{seller.id}}">
                 <ul class="list-group">
                     <li class="list-group-item text-muted" style="background-color: red; text-align: center; color:black;">Delete Account</li>
                 </ul>
             </a>
+
             {% endif %}
         </div>
 
@@ -61,11 +64,13 @@
             {% include 'house/usr_single_house.html' with house=house %}
         </div>
         {% endfor %}
+
     </div>
 </div>
 
 <div id="editProfile" class="tabcontent">
     <h1>Edit Profile</h1>
+    <hr>
     <form class="form form-horizontal"method="post">
         {% csrf_token %}
         {{ form }}<br>
@@ -75,10 +80,18 @@
 
     <div id="searchHistory" class="tabcontent">
     <h1>Your search history</h1>
+    <hr>
+    <ul>
         {% for term in search_history %}
                 <h3>{{term}}</h3>
         {% endfor %}
         <a href="{% url 'clear_search' %}" class="btn btn-primary">Clear history</a>
+            <!--<a href="/houses?search_filter={{term}}">-->
+                    <li><h3>{{term}}</h3>
+                <!--<button type="button" style="background-color: orange" id="search-btn" class="btn btn-default"> Search</button>-->
+            <!--</a>-->
+        {% endfor %}
+    </ul>
     </div>
 </div>
 <script>
