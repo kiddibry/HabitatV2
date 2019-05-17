@@ -44,18 +44,18 @@
     </div>
   </div>
 </nav>
-    {% if messages %}
-    <div class="span12">
-    {% for message in messages %}
-        <div class="alert alert-{{ message.tags }}" style="color: crimson;">
-            {{ message|safe }}
-        </div>
-    {% endfor %}
-</div>
-{% endif %}
-    <div class="container">
 
-    <div class="container" id="all_but_head_and_footer"> 
+    {% if messages %}
+        <div class="span12">
+        {% for message in messages %}
+            <div class="alert alert-{{ message.tags }}" style="color: crimson;">
+                {{ message|safe }}
+            </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+    <div class="container" id="all_but_head_and_footer">
     {% block content %}
 
 
