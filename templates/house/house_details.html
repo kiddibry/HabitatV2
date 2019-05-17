@@ -20,6 +20,10 @@
     <p>Price: {{ house.price }}kr |  Size: {{ house.size }}m²</p>
     <p>Seller:<a href="/users/{{ house.seller.id }}">{{ house.seller.name }}</a></p>
 
+    {% if not user.is_authenticated %}
+        <p style="color: crimson; font-size: 1.5em"> Create and sign in an account to be able to buy and sell real estate</p>
+    {% endif %}
+
     {% if user.is_authenticated %}
 
         {% if user.profile != house.seller %}
