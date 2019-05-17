@@ -84,9 +84,14 @@
     <a href="{% url 'clear_search' %}" class="btn btn-primary">Clear search history</a>
     <ul>
         {% for term in search_history %}
+<<<<<<< HEAD
                 <li><h3>{{term}}</h3></li>
         {% endfor %}
 
+=======
+                <h3>{{term}}</h3>
+        {% endfor %}
+>>>>>>> acd9135018bcf30d84cc578923db9a0d1ac4d92b
     </ul>
     </div>
 </div>

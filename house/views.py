@@ -85,6 +85,7 @@ def update_house(request, id):
     if request.user.profile != get_object_or_404(House, pk=id).seller:
         return redirect('house_details', id=id)
     instance = get_object_or_404(House, pk=id)
+    images = HouseImage.objects.filter(house=id)
     if request.method == 'POST':
         form = HouseUpdateForm(data=request.POST, instance=instance)
         if form.is_valid():
@@ -94,7 +95,8 @@ def update_house(request, id):
         form = HouseUpdateForm(instance=instance)
     return render(request, 'house/update_house.html', {
         'form': form,
-        'id': id
+        'id': id,
+        'images': images
     })
 
 
@@ -126,7 +128,7 @@ def add_images(request, id):
                 image = form.save(commit=False)
                 image.house = instance
                 image.save()
-                return redirect('house_details', id=id)
+                return redirect('update_house', id=id)
         else:
             form = HouseAddImagesForm(instance=instance)
         return render(request, 'house/add_images.html', {
@@ -134,3 +136,13 @@ def add_images(request, id):
             'id': id
         })
 
+
+@login_required
+def remove_image(request, id):
+    image = get_object_or_404(HouseImage, pk=id)
+    # imageHouse = get_object_or_404(House, pk=image.house_id)
+    if request.user.profile != image.house.seller:
+        return redirect('house_details', id=id)
+    else:
+        image.delete()
+        return redirect('update_house', id=image.house_id)
