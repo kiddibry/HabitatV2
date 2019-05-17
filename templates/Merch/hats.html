@@ -6,8 +6,19 @@
     <link rel="stylesheet" href="{% static 'css/merch.css' %}">
 
   <main id="bodyContent">
+      {% for hat in hats %}
+      <a href="{% url 'merch_buymerch' hat.id %}">
+          <div class="merch_box imageBox p5">
+            <img src="{{hat.image}}" alt="Trulllli" width="100%" height="222">
+            <h3>{{hat.name}}</h3>
+            <p>{{hat.description}}</p>
+            <p>{{hat.price}}kr.</p>
+        </div>
+      </a>
 
-      <div class="merch_box imageBox p5">
+      {% endfor %}
+    </main>
+      <!--<div class="merch_box imageBox p5">
     <img src="{% static 'images/hat.png' %}" alt="Trulllli" width="100%" height="222">
       <h3>Habitat hat</h3>
       <p>A crazy hat</p>
@@ -19,7 +30,7 @@
       <h3>High Habitat hat</h3>
       <p>Own the place with this hat</p>
       <p>12.80&euro;</p>
-    </div>
+    </div>-->
 
-  </main>
+
 {% endblock %}

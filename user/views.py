@@ -60,3 +60,10 @@ def delete_profile(request, id):
     user.delete()
     return redirect('register')
 
+
+def clear_search(request):
+    searches = SearchTerm.objects.filter(user=request.user)
+    for term in searches:
+        term.delete()
+    return redirect('seller_details', id=request.user.id)
+

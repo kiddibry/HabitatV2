@@ -9,13 +9,13 @@
 
     <div class="big_box">
         <div class="img_box">
-            <img class="merch_photo"  src="../../static/images/doge.png" height="1002" width="1024"/>
+            <img class="merch_photo"  src="{{merch.image}}" height="1002" width="1024"/>
         </div>
 
         <div class="data_box">
-            <div class="name_box">Name: </div>
-            <div class="price_box">Price: </div>
-            <div class="info_box">Info: </div>
+            <div class="name_box">Name: {{merch.name}}</div>
+            <div class="price_box">Price: {{merch.price}} kr.</div>
+            <div class="info_box">Info: {{merch.description}}</div>
         </div>
     </div>
 

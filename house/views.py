@@ -12,11 +12,12 @@ from user.forms.profile_form import SearchTermForm
 def index(request):
     if 'search_filter' in request.GET:
         search_filter = request.GET['search_filter']
-        searchForm = SearchTermForm()
-        term = searchForm.save(commit=False)
-        term.user = request.user
-        term.term = search_filter
-        term.save()
+        if search_filter != '':
+            searchForm = SearchTermForm()
+            term = searchForm.save(commit=False)
+            term.user = request.user
+            term.term = search_filter
+            term.save()
         houses = [{
             'id': x.id,
             'name': x.name,
@@ -24,10 +25,7 @@ def index(request):
             'firstImage': x.houseimage_set.first().image,
             'postal_code': x.postal_code,
             'size': x.size,
-            'price': x.price,
-            'category': {
-                'name': x.category.name
-            }
+            'price': x.price
         } for x in House.objects.annotate(search=SearchVector('name', 'postal_code', 'description', 'category')).filter(search__icontains=search_filter)]
         return JsonResponse({'data': houses})
     context = {'houses': House.objects.all().order_by('name')}

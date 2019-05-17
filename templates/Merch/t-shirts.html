@@ -6,28 +6,17 @@
     <link rel="stylesheet" href="{% static 'css/merch.css' %}">
 
   <main id="bodyContent">
-    <div class="merch_box imageBox p5">
-      <img src="{% static 'images/t-shirt.png' %}" alt="Trulllli" width="100%" height="222">
-      <h3>Habitat</h3>
-      <p>Beautiful t-shirt</p>
-      <p>9.50&euro;</p>
-    </div>
-
-    <div class="merch_box imageBox p5">
-      <img src="{% static 'images/tshirt.png' %}" alt="Trulllli" width="100%" height="222">
-      <h3>Love t-shirt</h3>
-      <p>The cool one</p>
-      <p>17.50&euro;</p>
-    </div>
-
-    <div class="merch_box imageBox p5">
-      <a href="https://www.w3schools.com">
-      <img src="{% static 'images/tshirt2.png' %}" alt="Trulllli" width="100%" height="222">
-      <h3>Lion t-shirt</h3>
-      <p>The sexy one</p>
-      <p>12.50&euro;</p>
+    {% for tshirt in tshirts %}
+      <a href="{% url 'merch_buymerch' tshirt.id %}">
+        <div class="merch_box imageBox p5">
+            <img src="{{tshirt.image}}" alt="Trulllli" width="100%" height="222">
+            <h3>{{tshirt.name}}</h3>
+            <p>{{tshirt.description}}</p>
+            <p>{{tshirt.price}}kr.</p>
+        </div>
       </a>
-    </div>
+    {% endfor %}
+    </main>
 
-  </main>
+
 {% endblock %}
