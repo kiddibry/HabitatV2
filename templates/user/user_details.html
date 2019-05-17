@@ -85,7 +85,7 @@
         {% for term in search_history %}
                 <h3>{{term}}</h3>
         {% endfor %}
-
+        <a href="{% url 'clear_search' %}" class="btn btn-primary">Clear history</a>
     </ul>
     </div>
 </div>
