@@ -6,9 +6,11 @@
         <input type="submit" value="Update" class="btn btn-primary pull-right" style="clear:both; margin:10px 0">
     </form>
     {% for image in images%}
-        <img src="{{image.image}}" alt="image" class="hs_img">
+    <div class="Janus" style="margin-top: 1.5em">
+        <img src="{{image.image}}" alt="image" class="hs_img" style="width: 45%; height: 20em">
         <a href="{% url 'delete_image' image.id %}" class="btn btn-primary">Delete image</a>
+    </div>
     {% endfor %}
     <br>
-    <a href="{% url 'add_images' id %}" class="btn btn-primary">Add image</a>
+    <a href="{% url 'add_images' id %}" class="btn btn-primary" style="margin-top: 1em; text-align: center">Add image</a>
 {% endblock %}
